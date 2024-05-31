@@ -79,7 +79,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Lo lamento, no existe nada en esta dirección.
+        ///   Busca una cadena traducida similar a Lo lamentamos, no existe nada en esta dirección.
         /// </summary>
         internal static string ResourceNotFountErrorMessage {
             get {

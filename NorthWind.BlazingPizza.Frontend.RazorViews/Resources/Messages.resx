@@ -124,6 +124,6 @@
     <value>Recurso no encontrado</value>
   </data>
   <data name="ResourceNotFountErrorMessage" xml:space="preserve">
-    <value>Lo lamento, no existe nada en esta dirección</value>
+    <value>Lo lamentamos, no existe nada en esta dirección</value>
   </data>
 </root>
