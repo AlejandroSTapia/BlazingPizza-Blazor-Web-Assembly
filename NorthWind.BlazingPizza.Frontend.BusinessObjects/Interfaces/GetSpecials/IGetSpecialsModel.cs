@@ -3,8 +3,8 @@ using NorthWind.BlazingPizza.Entities.Dtos.GetSpecials;
 
 namespace NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetSpecials
 {
-	//Aqui va
-		//Que es lo que queremos   -  Por ende se empeiza por el que, no como(que vfa en capas exteriore)
+	//Aqui va:
+		//Que es lo que queremos    -  Por ende se empeiza por el que, no como(que vfa en capas exteriore)
 	public interface IGetSpecialsModel
 	{
 		//se queire que se devuelvan los datos de la pizza
