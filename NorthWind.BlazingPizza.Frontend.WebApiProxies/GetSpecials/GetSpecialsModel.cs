@@ -1,10 +1,14 @@
 ﻿using NorthWind.BlazingPizza.Entities.Dtos.GetSpecials;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetSpecials;
 
- //aqui ya viene el como voya devolver la lista de productos
+//Puente para consumir desde el front el back de la API  - Modelo de la app 
+
+
+//aqui ya viene el como voya devolver la lista de productos
 namespace NorthWind.BlazingPizza.Frontend.WebApiProxies.GetSpecials
 {
-	internal class GetSpecialsModel: IGetSpecialsModel
+	internal class GetSpecialsModel: IGetSpecialsModel //se depende de la interfaz, no de la implementacion
+		//Con eso se logra un  desacoplamiento
 	{
 		//IEnumerable<PizzaSpecialDto> Specials = []; //se borra porque lo descargado ya implementara esto
 		
