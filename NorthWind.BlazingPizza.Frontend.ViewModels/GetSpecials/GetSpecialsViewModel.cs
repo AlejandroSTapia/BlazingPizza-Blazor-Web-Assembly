@@ -10,8 +10,8 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels.GetSpecials
 {
 	//El proposito de GetSpecialsViewModel es:
 		//exponer los datos a la vista
-			//para eso necesita un modelo
-	public class GetSpecialsViewModel(IGetSpecialsModel model) //se pide la dependencia
+			//para eso necesita un modelo:
+	public class GetSpecialsViewModel(IGetSpecialsModel model) //se pide la dependencia 
 	{
 		//a la vista le voy a ofecer una colccion de dto
 		//Este va a consumir la vista:
