@@ -1,0 +1,32 @@
+﻿<h3>Specials</h3>
+@* se va a traer la vista desde el view model que viene desde el model *@
+
+@* para que se injecte el model *@
+@* @inject GetSpecialsViewModel ViewModel *@
+@* esto tambien se puede colocar en el codigo *@
+
+
+<div class="main">
+	<ul class="pizza-cards">
+		@if (ViewModel.Specials != null)
+		{
+			foreach (var Special in ViewModel.Specials)
+			{
+				<li style="background-image: url('https://ticapacitacion.blob.core.windows.net/blazingpizzaimages/@Special.ImageUrl')">
+					<div class="pizza-info">
+						<span class="title">
+							@Special.Name
+						</span>
+				
+							@Special.Description
+	
+						<span>
+							@Special.FormatterBasePrice
+						</span>
+					</div>
+				</li>
+			}
+		}
+	</ul>
+
+</div>

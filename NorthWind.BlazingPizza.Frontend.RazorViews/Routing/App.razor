@@ -1,0 +1,21 @@
+﻿@using NorthWind.BlazingPizza.Frontend.RazorViews.Resources
+@using NorthWind.BlazingPizza.Frontend.RazorViews.Shared
+@* este copoinente se encargara de configurar el ambeinte de blazor
+sera el papa de los compenetes *@
+<Router AppAssembly="typeof(App).Assembly"> @*  ensamblado donde estan las paginas *@
+	<Found Context="context">
+		<RouteView RouteData="context"
+			DefaultLayout="typeof(MainLayout)"/>
+			<FocusOnNavifate RouteData="context" Selector="h1"/>
+	</Found>
+	<NotFound>
+		<PageTitle>
+			@Messages.ResourceNotFoundPageTitle
+		</PageTitle>
+		<LayoutView layout="typeof(MainLaout)">
+			<p role="alert">
+				@Messages.ResourceNotFountErrorMessage
+			</p>
+		</LayoutView>
+	</NotFound>
+</Router>
