@@ -7,6 +7,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
 	//las dependencias se reciben a taves del atributo o directiva @Inject no del constructor
 	public partial class Specials
 	{
+	//la vista no habla con el modelo, si no con el viewModel, pr ello se debe hacer una instancia del viewmodel
 		//De esta forma recibo la dependencia, indicandole que se va a injectar del viewmodl
 		[Inject]
 	 GetSpecialsViewModel ViewModel { get; set; }
@@ -19,3 +20,8 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
 		}
 	}
 }
+
+//tradicionalmente recibimos a travez del cnsructor las dependencias
+	//pero en el caso de los componentes razor.cs, no se reciben asi
+	//si no a travez del atributo
+		//Inject
