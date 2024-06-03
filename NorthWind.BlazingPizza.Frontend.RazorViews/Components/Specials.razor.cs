@@ -5,7 +5,7 @@ using NorthWind.BlazingPizza.Frontend.ViewModels.GetSpecials;
 namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
 {
 	//las dependencias se reciben a taves del atributo o directiva @Inject no del constructor
-	public partial class Specials
+	public partial class Specials/*: ComponentBase*/ // es opcional colocarlo ya que internamente lo coloca aunque no se vea
 	{
 	//la vista no habla con el modelo, si no con el viewModel, pr ello se debe hacer una instancia del viewmodel
 		//De esta forma recibo la dependencia, indicandole que se va a injectar del viewmodl

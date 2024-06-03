@@ -1,10 +1,10 @@
-﻿<h3>Specials</h3>
-@* se va a traer la vista desde el view model que viene desde el model *@
+﻿@* se va a traer la vista desde el view model que viene desde el model *@
 
 @* para que se injecte el model *@
 @* @inject GetSpecialsViewModel ViewModel *@
 @* esto tambien se puede colocar en el codigo *@
 
+@* Este es un componente que no responde a rutas *@
 
 <div class="main">
 	<ul class="pizza-cards">
@@ -16,11 +16,9 @@
 					<div class="pizza-info">
 						<span class="title">
 							@Special.Name
-						</span>
-				
-							@Special.Description
-	
-						<span>
+						</span>				
+							@Special.Description	
+						<span class="price">
 							@Special.FormatterBasePrice
 						</span>
 					</div>
