@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.IoC\NorthWind.BlazingPizza.Frontend.IoC.csproj" />
-    <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.RazorViews\NorthWind.BlazingPizza.Frontend.RazorViews.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,17 +1,15 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using NorthWind.BlazingPizza.Frontend.ViewModels;
+﻿using NorthWind.BlazingPizza.Frontend.ViewModels;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies;
 
-namespace NorthWind.BlazingPizza.Frontend.IoC
+namespace Microsoft.Extensions.DependencyInjection;
+
+public static class DependencyContainer
 {
-	public static class DependencyContainer
+	public static IServiceCollection AddBlazingPizzaServices(
+		this IServiceCollection services)
 	{
-		public static IServiceCollection AddFrontendServices(
-			this IServiceCollection services)
-		{
-			services.AddModels();
-			services.AddViewModels();
-			return services;
-		}
+		services.AddModels();
+		services.AddViewModels();
+		return services;
 	}
 }
