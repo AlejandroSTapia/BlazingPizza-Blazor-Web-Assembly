@@ -33,11 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.Fron
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIs", "UIs", "{E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.BlazorClient", "NorthWind.BlazingPizza.BlazorClient\NorthWind.BlazingPizza.BlazorClient.csproj", "{D99407C4-5A3D-4C45-9612-FBC7E812FCF9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.MauiClient", "NorthWind.BlazingPizza.MauiClient\NorthWind.BlazingPizza.MauiClient.csproj", "{73FA03EC-4D49-488B-90F2-D216BB2017CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.Backend.BusinnesObjects", "NorthWind.BlazingPizza.Backend.BusinnesObjects\NorthWind.BlazingPizza.Backend.BusinnesObjects.csproj", "{4DF930B3-2459-49A7-9F58-802A494C4B8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.Backend.BusinnesObjects", "NorthWind.BlazingPizza.Backend.BusinnesObjects\NorthWind.BlazingPizza.Backend.BusinnesObjects.csproj", "{4DF930B3-2459-49A7-9F58-802A494C4B8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.BlazorClient", "NorthWind.BlazingPizza.BlazorClient\NorthWind.BlazingPizza.BlazorClient.csproj", "{0AC09D79-236E-4731-B93C-B154C15D127E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,10 +69,6 @@ Global
 		{EFF7989B-E2E2-4874-AAB5-9635ADBE0203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFF7989B-E2E2-4874-AAB5-9635ADBE0203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFF7989B-E2E2-4874-AAB5-9635ADBE0203}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D99407C4-5A3D-4C45-9612-FBC7E812FCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D99407C4-5A3D-4C45-9612-FBC7E812FCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D99407C4-5A3D-4C45-9612-FBC7E812FCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D99407C4-5A3D-4C45-9612-FBC7E812FCF9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{73FA03EC-4D49-488B-90F2-D216BB2017CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{73FA03EC-4D49-488B-90F2-D216BB2017CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73FA03EC-4D49-488B-90F2-D216BB2017CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -83,6 +79,10 @@ Global
 		{4DF930B3-2459-49A7-9F58-802A494C4B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DF930B3-2459-49A7-9F58-802A494C4B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DF930B3-2459-49A7-9F58-802A494C4B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC09D79-236E-4731-B93C-B154C15D127E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC09D79-236E-4731-B93C-B154C15D127E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC09D79-236E-4731-B93C-B154C15D127E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC09D79-236E-4731-B93C-B154C15D127E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,9 +99,9 @@ Global
 		{BAE804B2-941B-40D5-920C-5D716E24542E} = {35E1D1D4-79E2-4311-94B5-5ADE0F3CC490}
 		{EFF7989B-E2E2-4874-AAB5-9635ADBE0203} = {BAE804B2-941B-40D5-920C-5D716E24542E}
 		{E5D8D5CE-13BD-49ED-8CC3-95711A5C9270} = {35E1D1D4-79E2-4311-94B5-5ADE0F3CC490}
-		{D99407C4-5A3D-4C45-9612-FBC7E812FCF9} = {E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}
 		{73FA03EC-4D49-488B-90F2-D216BB2017CF} = {E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}
 		{4DF930B3-2459-49A7-9F58-802A494C4B8D} = {F3CE12CA-6F38-4423-A20F-1010B95D5270}
+		{0AC09D79-236E-4731-B93C-B154C15D127E} = {E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA311469-025D-4D54-9E24-4A5CA009B5F2}
