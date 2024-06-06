@@ -39,6 +39,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.Back
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.BlazorClient", "NorthWind.BlazingPizza.BlazorClient\NorthWind.BlazingPizza.BlazorClient.csproj", "{0AC09D79-236E-4731-B93C-B154C15D127E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.Backend.UseCases", "NorthWind.BlazingPizza.Backend.UseCases\NorthWind.BlazingPizza.Backend.UseCases.csproj", "{9C57F393-D2F5-473D-A8A8-4CB8145FED53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.Backend.Repositories", "NorthWind.BlazingPizza.Backend.Repositories\NorthWind.BlazingPizza.Backend.Repositories.csproj", "{D665816A-03FD-4852-8DF9-F439CA6F36FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataSources", "DataSources", "{A67D484C-3042-4173-B050-AE6E0BF6AED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.DBAdmin", "NorthWind.BlazingPizza.DBAdmin\NorthWind.BlazingPizza.DBAdmin.csproj", "{96744C77-8B7F-4AE4-A5CE-7CAF19ECBC81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.EFCore.DataSources", "NorthWind.BlazingPizza.EFCore.DataSources\NorthWind.BlazingPizza.EFCore.DataSources.csproj", "{2BD845C1-D763-4DB5-B6A4-DFB9049580A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +93,22 @@ Global
 		{0AC09D79-236E-4731-B93C-B154C15D127E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AC09D79-236E-4731-B93C-B154C15D127E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AC09D79-236E-4731-B93C-B154C15D127E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C57F393-D2F5-473D-A8A8-4CB8145FED53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C57F393-D2F5-473D-A8A8-4CB8145FED53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C57F393-D2F5-473D-A8A8-4CB8145FED53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C57F393-D2F5-473D-A8A8-4CB8145FED53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D665816A-03FD-4852-8DF9-F439CA6F36FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D665816A-03FD-4852-8DF9-F439CA6F36FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D665816A-03FD-4852-8DF9-F439CA6F36FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D665816A-03FD-4852-8DF9-F439CA6F36FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96744C77-8B7F-4AE4-A5CE-7CAF19ECBC81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96744C77-8B7F-4AE4-A5CE-7CAF19ECBC81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96744C77-8B7F-4AE4-A5CE-7CAF19ECBC81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96744C77-8B7F-4AE4-A5CE-7CAF19ECBC81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD845C1-D763-4DB5-B6A4-DFB9049580A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD845C1-D763-4DB5-B6A4-DFB9049580A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD845C1-D763-4DB5-B6A4-DFB9049580A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD845C1-D763-4DB5-B6A4-DFB9049580A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +128,11 @@ Global
 		{73FA03EC-4D49-488B-90F2-D216BB2017CF} = {E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}
 		{4DF930B3-2459-49A7-9F58-802A494C4B8D} = {F3CE12CA-6F38-4423-A20F-1010B95D5270}
 		{0AC09D79-236E-4731-B93C-B154C15D127E} = {E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}
+		{9C57F393-D2F5-473D-A8A8-4CB8145FED53} = {F3CE12CA-6F38-4423-A20F-1010B95D5270}
+		{D665816A-03FD-4852-8DF9-F439CA6F36FD} = {FF6015CF-1492-4544-9760-BA7825C5DD56}
+		{A67D484C-3042-4173-B050-AE6E0BF6AED4} = {35E1D1D4-79E2-4311-94B5-5ADE0F3CC490}
+		{96744C77-8B7F-4AE4-A5CE-7CAF19ECBC81} = {A67D484C-3042-4173-B050-AE6E0BF6AED4}
+		{2BD845C1-D763-4DB5-B6A4-DFB9049580A1} = {A67D484C-3042-4173-B050-AE6E0BF6AED4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA311469-025D-4D54-9E24-4A5CA009B5F2}
