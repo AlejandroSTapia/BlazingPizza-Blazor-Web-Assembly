@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 {
+	//se implementa el servicio
 	internal class PizzaSpecialDataSource: BlazingPizzaContext, IPizzaSpecialDataSource
 	{
 		public PizzaSpecialDataSource(IOptions<DBOptions> options): base(options)

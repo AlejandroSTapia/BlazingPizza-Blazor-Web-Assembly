@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.BlazingPizza.Backend.Controllers\NorthWind.BlazingPizza.Backend.Controllers.csproj" />
+    <ProjectReference Include="..\NorthWind.BlazingPizza.Backend.Presenters\NorthWind.BlazingPizza.Backend.Presenters.csproj" />
+    <ProjectReference Include="..\NorthWind.BlazingPizza.Backend.Repositories\NorthWind.BlazingPizza.Backend.Repositories.csproj" />
+    <ProjectReference Include="..\NorthWind.BlazingPizza.Backend.UseCases\NorthWind.BlazingPizza.Backend.UseCases.csproj" />
+    <ProjectReference Include="..\NorthWind.BlazingPizza.EFCore.DataSources\NorthWind.BlazingPizza.EFCore.DataSources.csproj" />
+  </ItemGroup>
+
+</Project>
