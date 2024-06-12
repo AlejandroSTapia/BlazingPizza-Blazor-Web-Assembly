@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetSpecials;
+using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetToppings;
 using NorthWind.BlazingPizza.Backend.Repositories.Repositories;
 
 namespace NorthWind.BlazingPizza.Frontend.ViewModels
@@ -12,6 +13,8 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels
 			this IServiceCollection services)
 		{
 			services.AddScoped<IGetSpecialsRepository, GetSpecialsRepository>();
+
+			services.AddScoped<IGetToppingsRepository, GetToppingsRepository>();
 			return services;
 		}
 	}

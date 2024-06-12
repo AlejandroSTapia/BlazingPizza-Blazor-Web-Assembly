@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetSpecials;
+using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetToppings;
+using NorthWind.BlazingPizza.Backend.UseCases.GetToppings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,9 @@ namespace NorthWind.BlazingPizza.Backend.UseCases
 			this IServiceCollection services)
 		{
 			services.AddScoped<IGetSpecialsInputPort, GetSpecialsInteractor>();
+
+			services.AddScoped<IGetToppingsInputPort, GetToppingsInteractor>();
+
 			return services;
 		}
 	}

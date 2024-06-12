@@ -4,11 +4,6 @@ using Microsoft.VisualBasic.FileIO;
 using NorthWind.BlazingPizza.Backend.Repositories.Entities;
 using NorthWind.BlazingPizza.DBAdmin.Configurations;
 using NorthWind.BlazingPizza.EFCore.DataSources.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 {
@@ -29,5 +24,6 @@ namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 		}
 
 		public DbSet<PizzaSpecial> PizzaSpecials { get; set; }
+		public DbSet<Topping> Toppings { get; set; }
 	}
 }

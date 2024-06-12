@@ -10,5 +10,8 @@ namespace NorthWind.BlazingPizza.Entities.ValueObjects
 	public class Endpoints
 	{
 		public const string GetSpecials = $"/{nameof(GetSpecials)}";
+
+		//nuevo enpoint? nueva constante
+		public const string GetToppings = $"/{nameof(GetToppings)}";
 	}
 }
