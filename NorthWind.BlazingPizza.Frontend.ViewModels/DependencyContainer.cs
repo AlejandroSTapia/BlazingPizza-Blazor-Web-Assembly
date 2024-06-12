@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NorthWind.BlazingPizza.Frontend.ViewModels.ConfigurePizzaDialog;
 using NorthWind.BlazingPizza.Frontend.ViewModels.GetSpecials;
 
 namespace NorthWind.BlazingPizza.Frontend.ViewModels
@@ -11,6 +12,7 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels
 			this IServiceCollection services)
 		{
 			services.AddScoped<GetSpecialsViewModel>();
+			services.AddScoped<ConfigurePizzaDialogViewModel>();
 			return services;
 		}
 	}

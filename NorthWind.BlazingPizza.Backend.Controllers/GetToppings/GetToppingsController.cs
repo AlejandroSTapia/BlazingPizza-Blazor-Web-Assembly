@@ -18,6 +18,7 @@ namespace NorthWind.BlazingPizza.Backend.Controllers.GetToppings
 			app.MapGet(Endpoints.GetToppings,
 				async(IGetToppingsInputPort inputPort)=>
 				TypedResults.Ok(await inputPort.GetToppingsAsync()));
+			return app;
 		}
 	}
 }

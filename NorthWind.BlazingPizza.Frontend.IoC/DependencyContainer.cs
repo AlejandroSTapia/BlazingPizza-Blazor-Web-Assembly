@@ -14,11 +14,17 @@ public static class DependencyContainer
 		BlazingPizzaOptions BlazingPizzaOptions = new();
 		configureBlazingPizzaOptions(BlazingPizzaOptions);//aqui se pidn las opciones
 
+		Uri WebApiUri = new Uri(BlazingPizzaOptions.WebApiBaseAddress);
+
 		//services.AddModels();
 		services.AddModels(
-			httpClient => httpClient.BaseAddress = 
-			new Uri(BlazingPizzaOptions.WebApiBaseAddress),
-			null);
+			httpClient => httpClient.BaseAddress = WebApiUri,
+			//new Uri(BlazingPizzaOptions.WebApiBaseAddress),
+			null,
+			httpClient => httpClient.BaseAddress = WebApiUri,
+			//new Uri(BlazingPizzaOptions.WebApiBaseAddress),
+			null
+			);
 
 		services.AddViewModels();
 
