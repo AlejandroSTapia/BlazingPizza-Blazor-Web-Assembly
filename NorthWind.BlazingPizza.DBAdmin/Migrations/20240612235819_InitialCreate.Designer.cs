@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NorthWind.BlazingPizza.DBAdmin.DataContext;
 
@@ -10,9 +11,11 @@ using NorthWind.BlazingPizza.DBAdmin.DataContext;
 namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 {
     [DbContext(typeof(BlazingPizzaContext))]
-    partial class BlazingPizzaContextModelSnapshot : ModelSnapshot
+    [Migration("20240612235819_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

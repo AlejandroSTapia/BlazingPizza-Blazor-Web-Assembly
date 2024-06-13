@@ -28,6 +28,20 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                     table.PrimaryKey("PK_PizzaSpecials", x => x.Id);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Toppings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Toppings", x => x.Id);
+                });
+
             migrationBuilder.InsertData(
                 table: "PizzaSpecials",
                 columns: new[] { "Id", "BasePrice", "Description", "ImageUrl", "Name" },
@@ -41,6 +55,34 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                     { 6, 90.25m, "TDe piÃ±a, jamÃ³n y queso...", "hawaiian.jpg", "Hawaiana" },
                     { 7, 118.50m, "Es como una ensalada, pero en una pizza", "salad.jpg", "Delicia vegetariana" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Toppings",
+                columns: new[] { "Id", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "Queso extra", 23.50m },
+                    { 2, "Tocino de pavo", 28.80m },
+                    { 3, "Tocino de jabalÃ­", 28.80m },
+                    { 4, "Tocino de ternera", 28.80m },
+                    { 5, "TÃ© y bollos", 47.00m },
+                    { 6, "Bollos reciÃ©n horneados", 43.50m },
+                    { 7, "Pimiento", 9.00m },
+                    { 8, "Cebolla", 9.00m },
+                    { 9, "ChampiÃ±ones", 9.00m },
+                    { 10, "Pepperoni", 9.00m },
+                    { 11, "Salchicha de pato", 30.80m },
+                    { 12, "AlbÃ³ndigas de venado", 24.50m },
+                    { 13, "Cubierta de langosta", 612.50m },
+                    { 14, "Caviar de esturiÃ³n", 965.25m },
+                    { 15, "Corazones de alcachofa", 32.60m },
+                    { 16, "Tomates frescos", 19.00m },
+                    { 17, "Albahaca", 19.00m },
+                    { 18, "Filete", 80.50m },
+                    { 19, "Pimientos picantes", 39.80m },
+                    { 20, "Pollo bÃºfalo", 48.00m },
+                    { 21, "Queso azul", 24.50m }
+                });
         }
 
         /// <inheritdoc />
@@ -48,6 +90,9 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
         {
             migrationBuilder.DropTable(
                 name: "PizzaSpecials");
+
+            migrationBuilder.DropTable(
+                name: "Toppings");
         }
     }
 }

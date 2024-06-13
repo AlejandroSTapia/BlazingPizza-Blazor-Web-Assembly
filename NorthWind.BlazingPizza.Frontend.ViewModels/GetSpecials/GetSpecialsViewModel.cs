@@ -16,6 +16,7 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels.GetSpecials
 		//a la vista le voy a ofecer una colccion de dto
 		//Este va a consumir la vista:
 		public IEnumerable<PizzaSpecialDto> Specials { get; private set; }
+
 		//ofrecerle al usuario un mtd que no devuleva nada y decir solo que vaya por las pixxas:
 		public async Task GetSpecialsAsync()
 		{

@@ -23,6 +23,7 @@ namespace NorthWind.BlazingPizza.Frontend.WebApiProxies.GetToppings
 					.GetFromJsonAsync<IEnumerable<ToppingDto>>(
 					Endpoints.GetToppings);
 			}
+			return Toppings;
 		}
 	}
 }
