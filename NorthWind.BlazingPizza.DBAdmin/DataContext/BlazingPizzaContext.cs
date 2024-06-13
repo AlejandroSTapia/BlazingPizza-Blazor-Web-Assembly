@@ -15,7 +15,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.DataContext
 		//indicar la bd a crear, motor de bd, sobreeescribiendo  OnConfiguring
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-
+			// Se coloco en duro para crear objts nuevo a la base de datos
 			optionsBuilder.UseSqlServer(
 				"Server=tcp:devst.database.windows.net,1433;Database=BlazingPizza;Persist Security Info=False;" +
 				"User ID=devst;Password=Alex1122;MultipleActiveResultSets=False;Encrypt=True;" +

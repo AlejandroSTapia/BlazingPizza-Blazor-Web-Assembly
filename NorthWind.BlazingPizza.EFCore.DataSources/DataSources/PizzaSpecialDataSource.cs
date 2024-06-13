@@ -18,7 +18,7 @@ namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 		public PizzaSpecialDataSource(IOptions<DBOptions> options): base(options)
 		{
 			ChangeTracker.QueryTrackingBehavior =
-				Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+				QueryTrackingBehavior.NoTracking;
 		}		
 
 		public async Task<IEnumerable<PizzaSpecialDto>> GetPizzaSpecialDtosFromQueryAsync(
