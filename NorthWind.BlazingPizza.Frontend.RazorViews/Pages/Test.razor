@@ -1,6 +1,13 @@
 ﻿@page "/test"
 
-@inject IOptions<BlazingPizzaOption> Options
+@using Microsoft.Extensions.Options
+@using NorthWind.BlazingPizza.Frontend.BusinessObjects.Agregates
+@using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetToppings
+@using NorthWind.BlazingPizza.Frontend.BusinessObjects.Options
+@using NorthWind.BlazingPizza.Frontend.ViewModels.GetSpecials
+
+
+@inject IOptions<BlazingPizzaOptions> Options
 @inject GetSpecialsViewModel ViewModel
 @inject IGetToppingsModel ToppingsModel
 
@@ -11,7 +18,8 @@
 
 @code {
 	CustomPizza Pizza { get; set; }
-	public override async TAsk OnInitializedAsync()
+
+	public override async Task OnInitializedAsync()
 	{
 		await ViewModel.GetSpecialsAsync();
 		var Toppings = await ToppingsModel.GetToppingsAsync();

@@ -9,10 +9,10 @@
 				<label>@Messages.CustomPizzaSizeLabel:</label>
 				<input type="range"
 					   min="@Options.Value.MinimumPizzaSize"
-					   max="@Options.Value.MazimumPizzaSize"
+					   max="@Options.Value.MaximumPizzaSize"
 					   step="@Options.Value.SizeIncrement" />
 				<span class="size-label">
-					@CustomPizza.getFormattedSizeWithTotalPrice()
+					@CustomPizza.GetFormattedSizeWithTotalPrice()
 				</span>
 			</div>
 			<div>
@@ -23,9 +23,9 @@
 						<option>(@Messages.LoadingText)</option>
 					</select>
 				}
-				else if (CustomPizza.hasMaximumToppings)
+				else if (CustomPizza.HasMaximumToppings)
 				{
-					<div>(@Messages.HasMaximumToppingsText)</div>
+					<div>(@Messages.HasmaximumToppingsText)</div>
 				}
 				else
 				{
@@ -58,7 +58,7 @@
 			</div>
 		</form>
 		<div class="dialog-buttons">
-			<button class="btn btn-secondary" onclick="OnCancel">
+			<button class="btn btn-secondary" @onclick="OnCancel">
 				@Messages.CancelButtonText
 			</button>
 			<span>

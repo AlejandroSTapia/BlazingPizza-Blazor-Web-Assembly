@@ -1,4 +1,5 @@
 ﻿
+using NorthWind.BlazingPizza.Frontend.BusinessObjects;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Options;
 using NorthWind.BlazingPizza.Frontend.ViewModels;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies;
@@ -29,6 +30,7 @@ public static class DependencyContainer
 		services.AddViewModels();
 
 		services.AddSingleton(Options.Options.Create(BlazingPizzaOptions));
+		services.AddBusinessObjectsServices();
 
 		return services;
 	}
