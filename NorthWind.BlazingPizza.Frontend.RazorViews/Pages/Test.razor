@@ -1,0 +1,25 @@
+﻿@page "/test"
+
+@inject IOptions<BlazingPizzaOption> Options
+@inject GetSpecialsViewModel ViewModel
+@inject IGetToppingsModel ToppingsModel
+
+@if(Pizza!=null)
+{
+	<ConfigurePizzaDialog CustomPizza="Pizza" />
+}
+
+@code {
+	CustomPizza Pizza { get; set; }
+	public override async TAsk OnInitializedAsync()
+	{
+		await ViewModel.GetSpecialsAsync();
+		var Toppings = await ToppingsModel.GetToppingsAsync();
+		Pizza = new CustomPizza(
+			ViewModel.Specials.First(), Options.Value);
+
+		Pizza.AddTopping(Toppings.ElementAt(0));
+		Pizza.AddTopping(Toppings.ElementAt(1));
+		Pizza.AddTopping(Toppings.ElementAt(2));
+	}
+}

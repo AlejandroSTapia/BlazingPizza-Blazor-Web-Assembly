@@ -57,6 +57,6 @@ namespace NorthWind.BlazingPizza.Frontend.BusinessObjects.Agregates
 			GetTotalPrice().ToString("$ 0.00");
 
 		public string GetFormattedSizeWithTotalPrice() =>
-			$"{Size} cm ({GetFormattedTotalPrice})";
+			$"{Size} cm ({GetFormattedTotalPrice()})";
 	}
 }

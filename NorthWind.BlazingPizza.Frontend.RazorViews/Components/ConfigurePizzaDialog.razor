@@ -1,3 +1,76 @@
-﻿<h3>ConfigurePizzaDialog</h3>
+﻿<div class="dialog-container">
+	<div class="dialog">
+		<div class="dialog-title">
+			<h2>@CustomPizza.Special.Name</h2>
+			@CustomPizza.Special.Description
+		</div>
+		<form class="dialog-body">
+			<div>
+				<label>@Messages.CustomPizzaSizeLabel:</label>
+				<input type="range"
+					   min="@Options.Value.MinimumPizzaSize"
+					   max="@Options.Value.MazimumPizzaSize"
+					   step="@Options.Value.SizeIncrement" />
+				<span class="size-label">
+					@CustomPizza.getFormattedSizeWithTotalPrice()
+				</span>
+			</div>
+			<div>
+				<label>@Messages.AdditionalToppingsLabel:</label>
+				@if (ViewModel.Toppings == null)
+				{
+					<select class="custom-select" disabled>
+						<option>(@Messages.LoadingText)</option>
+					</select>
+				}
+				else if (CustomPizza.hasMaximumToppings)
+				{
+					<div>(@Messages.HasMaximumToppingsText)</div>
+				}
+				else
+				{
+					<select class="form-select">
+						<option value="-1" disabled selected>
+							(@Messages.SelectToppingOptionText)
+						</option>
+						@foreach (var Topping in ViewModel.Toppings)
+						{
+							<option value="@Topping.Id">
+								@Topping.GetFormattedNameWithPrice()
+							</option>
+						}
+					</select>
+				}
+			</div>
+			<div class="toppings">
+				@foreach (var Topping in CustomPizza.Toppings)
+				{
+					<div class="topping">
+						@Topping.Name
+						<span class="topping-price">
+							@Topping.GetFormattedPrice()
+						</span>
+						<button type="button" class="delete-topping">
+							X
+						</button>
+					</div>
+				}
+			</div>
+		</form>
+		<div class="dialog-buttons">
+			<button class="btn btn-secondary" onclick="OnCancel">
+				@Messages.CancelButtonText
+			</button>
+			<span>
+				@Messages.PriceText
+				<span class="price">
+					@CustomPizza.GetFormattedTotalPrice()
+				</span>
+			</span>
+			<button class="btn btn-success" @onclick="OnConfirm">
+				@Messages.OrderButtonText
+			</button>
+		</div>
 
-
+	</div>
+</div>

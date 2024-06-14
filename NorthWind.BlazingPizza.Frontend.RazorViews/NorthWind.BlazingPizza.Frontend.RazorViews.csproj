@@ -5,22 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Components\ConfigurePizzaDialog.razor" />
-  </ItemGroup>
-
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.5" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.ViewModels\NorthWind.BlazingPizza.Frontend.ViewModels.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Resources\Messages.Designer.cs">
@@ -42,15 +32,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Components\ConfigurePizzaDialog.razor" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Components\ConfigurePizzaDialog.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Components\ConfigurePizzaDialog.razor" />
+    <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.ViewModels\NorthWind.BlazingPizza.Frontend.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

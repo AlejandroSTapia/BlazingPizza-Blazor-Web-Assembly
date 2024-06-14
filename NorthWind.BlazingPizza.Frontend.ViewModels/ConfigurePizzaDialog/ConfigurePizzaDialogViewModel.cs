@@ -8,7 +8,7 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels.ConfigurePizzaDialog
 		IGetToppingsModel toppingsModel)
 	{
 		public IEnumerable<ToppingDto> Toppings { get; private set; }
-		public async Task GetToppings() =>
+		public async Task GetToppingsAsync() =>
 			Toppings = await toppingsModel.GetToppingsAsync();
 	}
 }
