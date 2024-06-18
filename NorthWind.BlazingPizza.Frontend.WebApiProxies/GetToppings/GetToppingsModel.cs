@@ -1,12 +1,7 @@
 ﻿using NorthWind.BlazingPizza.Entities.Dtos.GetToppings;
 using NorthWind.BlazingPizza.Entities.ValueObjects;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetToppings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Frontend.WebApiProxies.GetToppings
 {

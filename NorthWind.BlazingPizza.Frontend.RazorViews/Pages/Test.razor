@@ -1,33 +1,35 @@
 ﻿@page "/test"
-
 @using Microsoft.Extensions.Options
+@using NorthWind.BlazingPizza.Entities.Dtos.GetToppings
 @using NorthWind.BlazingPizza.Frontend.BusinessObjects.Agregates
 @using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetToppings
 @using NorthWind.BlazingPizza.Frontend.BusinessObjects.Options
 @using NorthWind.BlazingPizza.Frontend.ViewModels.GetSpecials
 
+@inject IOptions<BlazingPizzaOptions> Options;
+@inject GetSpecialsViewModel ViewModel;
+@inject IGetToppingsModel ToppingsModel;
 
-@inject IOptions<BlazingPizzaOptions> Options
-@inject GetSpecialsViewModel ViewModel
-@inject IGetToppingsModel ToppingsModel
 
-@if(Pizza!=null)
+@if (Pizza is not null)
 {
-	<ConfigurePizzaDialog CustomPizza="Pizza" />
+    <ConfigurePizzaDialog CustomPizza="Pizza"></ConfigurePizzaDialog>
 }
 
 @code {
-	CustomPizza Pizza { get; set; }
+    CustomPizza Pizza { get; set; }
 
-	public override async Task OnInitializedAsync()
-	{
-		await ViewModel.GetSpecialsAsync();
-		var Toppings = await ToppingsModel.GetToppingsAsync();
-		Pizza = new CustomPizza(
-			ViewModel.Specials.First(), Options.Value);
+    protected override async Task OnInitializedAsync()
+    {
+        await ViewModel.GetSpecialsAsync();
 
-		Pizza.AddTopping(Toppings.ElementAt(0));
-		Pizza.AddTopping(Toppings.ElementAt(1));
-		Pizza.AddTopping(Toppings.ElementAt(2));
-	}
+        IEnumerable<ToppingDto> toppings = await ToppingsModel.GetToppingsAsync();
+
+        Pizza = new CustomPizza(ViewModel.Specials.First(), Options.Value);
+
+        Pizza.AddTopping(toppings.ElementAt(0));
+        Pizza.AddTopping(toppings.ElementAt(1));
+        Pizza.AddTopping(toppings.ElementAt(2));
+    }
+
 }
