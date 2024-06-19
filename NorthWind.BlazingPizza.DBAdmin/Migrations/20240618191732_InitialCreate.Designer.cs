@@ -11,7 +11,7 @@ using NorthWind.BlazingPizza.DBAdmin.DataContext;
 namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 {
     [DbContext(typeof(BlazingPizzaContext))]
-    [Migration("20240613222358_InitialCreate")]
+    [Migration("20240618191732_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -47,7 +47,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PizzaSpecials");
+                    b.ToTable("PizzaSpecials", "blazingPizza");
 
                     b.HasData(
                         new
@@ -125,7 +125,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Toppings");
+                    b.ToTable("Toppings", "blazingPizza");
 
                     b.HasData(
                         new

@@ -44,7 +44,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PizzaSpecials");
+                    b.ToTable("PizzaSpecials", "blazingPizza");
 
                     b.HasData(
                         new
@@ -122,7 +122,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Toppings");
+                    b.ToTable("Toppings", "blazingPizza");
 
                     b.HasData(
                         new

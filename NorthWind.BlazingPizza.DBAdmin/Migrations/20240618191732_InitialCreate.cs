@@ -12,8 +12,12 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "blazingPizza");
+
             migrationBuilder.CreateTable(
                 name: "PizzaSpecials",
+                schema: "blazingPizza",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -30,6 +34,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Toppings",
+                schema: "blazingPizza",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -43,6 +48,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                 });
 
             migrationBuilder.InsertData(
+                schema: "blazingPizza",
                 table: "PizzaSpecials",
                 columns: new[] { "Id", "BasePrice", "Description", "ImageUrl", "Name" },
                 values: new object[,]
@@ -57,6 +63,7 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                 });
 
             migrationBuilder.InsertData(
+                schema: "blazingPizza",
                 table: "Toppings",
                 columns: new[] { "Id", "Name", "Price" },
                 values: new object[,]
@@ -89,10 +96,12 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PizzaSpecials");
+                name: "PizzaSpecials",
+                schema: "blazingPizza");
 
             migrationBuilder.DropTable(
-                name: "Toppings");
+                name: "Toppings",
+                schema: "blazingPizza");
         }
     }
 }

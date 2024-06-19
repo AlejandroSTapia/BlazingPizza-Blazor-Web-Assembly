@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
- 
+
 //Modelo de datos
 namespace NorthWind.BlazingPizza.DBAdmin.DataContext
 {
@@ -17,9 +17,8 @@ namespace NorthWind.BlazingPizza.DBAdmin.DataContext
 		{
 			// Se coloco en duro para crear objts nuevo a la base de datos
 			optionsBuilder.UseSqlServer(
-				"Server=tcp:devst.database.windows.net,1433;Database=BlazingPizza;Persist Security Info=False;" +
-				"User ID=devst;Password=Alex1122;MultipleActiveResultSets=False;Encrypt=True;" +
-				"TrustServerCertificate=False;Connection Timeout=30;");
+                "Server=tcp:devst.database.windows.net,1433;Initial Catalog=DBCarrito;Persist Security Info=False;User ID=devst;Password=Alex1122;" +
+				"MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 			base.OnConfiguring(optionsBuilder);
 		}
 
