@@ -23,7 +23,7 @@ namespace NorthWind.BlazingPizza.Frontend.BusinessObjects.Services
 		}
 
 		public decimal GetTotalPrice() =>
-			PizzasField.Sum(p => GetTotalPrice());
+			PizzasField.Sum(p => p.GetTotalPrice());
 
 		public string GetFormattedTotalPrice() =>
 			GetTotalPrice().ToString("0.00");

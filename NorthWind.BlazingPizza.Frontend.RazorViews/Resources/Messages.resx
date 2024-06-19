@@ -126,6 +126,9 @@
   <data name="CancelButtonText" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="CheckoutLinkText" xml:space="preserve">
+    <value>Ordenar</value>
+  </data>
   <data name="CustomPizzaSizeLabel" xml:space="preserve">
     <value>Tamaño</value>
   </data>
@@ -147,7 +150,16 @@
   <data name="ResourceNotFountErrorMessage" xml:space="preserve">
     <value>Lo lamentamos, no existe nada en esta dirección</value>
   </data>
+  <data name="SelectPizzaText" xml:space="preserve">
+    <value>Selecciona una pizza para empezar</value>
+  </data>
   <data name="SelectToppingOptionText" xml:space="preserve">
     <value>Selecciona</value>
+  </data>
+  <data name="TotalText" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="YourOrderText" xml:space="preserve">
+    <value>Tu pedido</value>
   </data>
 </root>
