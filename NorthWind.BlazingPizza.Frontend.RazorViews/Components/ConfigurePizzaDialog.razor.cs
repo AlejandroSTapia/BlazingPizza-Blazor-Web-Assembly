@@ -31,9 +31,18 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
 		[Parameter]
 		public EventCallback OnConfirm { get; set; }
 
+		//manejador de evento cuadno se inicialice
 		protected override async Task OnInitializedAsync()
 		{
 			await ViewModel.GetToppingsAsync();
 		}
+
+		//cuando se seleccione un topping
+		void ToppingSelected(ChangeEventArgs e) =>
+			CustomPizza.AddTopping( //CustomPizza.AddTopping es un agregado y su proposito es que proteja o add logica de los datos(validaciones)
+                ViewModel.Toppings
+				.First(t => t.Id == Convert.ToInt32(e.Value)));
+		
+		//Se coloca aqui en el code begin y no en el viewmodel. por el changeEvent
 	}
 }
