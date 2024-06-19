@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Components;
+using NorthWind.BlazingPizza.Frontend.BusinessObjects.Services;
+using NorthWind.BlazingPizza.Frontend.ViewModels.Index;
+
 namespace NorthWind.BlazingPizza.Frontend.RazorViews.Pages
 {
 	public partial class Index
@@ -7,5 +11,6 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Pages
 
 		[Inject]
 		ShoppingCart ShoppingCart { get; set; }
+
 	}
 }

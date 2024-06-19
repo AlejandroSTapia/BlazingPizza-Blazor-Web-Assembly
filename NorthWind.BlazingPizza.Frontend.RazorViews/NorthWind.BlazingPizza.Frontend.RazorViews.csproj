@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,15 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Components\OrderedPizza.razor" />
-  </ItemGroup>
-
-
-  <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
-
-
 
   <ItemGroup>
     <Compile Update="Resources\Messages.Designer.cs">
@@ -41,18 +34,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.ViewModels\NorthWind.BlazingPizza.Frontend.ViewModels.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Components\OrderedPizza.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Components\OrderedPizza.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Components\OrderedPizza.razor" />
   </ItemGroup>
 
 </Project>
