@@ -6,6 +6,8 @@
 
 @if(ViewModel.ShowConfigurePizzaDialog)
 {
-	<ConfigurePizzaDialog CustomPizza="ViewModel.CustomPizza"/>
+	<ConfigurePizzaDialog CustomPizza="ViewModel.CustomPizza"
+	OnCancel="ViewModel.CancelConfigurePizza"
+	OnConfirm="ViewModel.ConfirmConfigurePizza" />
 }
 
