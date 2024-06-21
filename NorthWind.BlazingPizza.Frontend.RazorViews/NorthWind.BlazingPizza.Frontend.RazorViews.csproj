@@ -36,4 +36,9 @@
     <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.ViewModels\NorthWind.BlazingPizza.Frontend.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Components\OrderedPizzas.razor" />
+  </ItemGroup>
+
+
 </Project>

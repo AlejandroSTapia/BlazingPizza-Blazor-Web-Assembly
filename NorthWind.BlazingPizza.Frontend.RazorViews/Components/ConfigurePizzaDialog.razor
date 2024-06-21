@@ -1,81 +1,80 @@
 ﻿<div class="dialog-container">
-	<div class="dialog">
-		<div class="dialog-title">
-			<h2>@CustomPizza.Special.Name</h2>
-			@CustomPizza.Special.Description
-		</div>
-		<form class="dialog-body">
-			<div>
-				<label>@Messages.CustomPizzaSizeLabel:</label>
-				<input type="range"
-					   min="@Options.Value.MinimumPizzaSize"
-					   max="@Options.Value.MaximumPizzaSize"
-					   step="@Options.Value.SizeIncrement" 
-					   @bind="CustomPizza.Size" @* enlace de dos vias ya que se enlza a value, pero se activa hasta que se suleta *@
-					   @bind:event="oninput"
-					   />
-				<span class="size-label">
-					@CustomPizza.GetFormattedSizeWithTotalPrice()
-				</span>
-			</div>
-			<div>
-				<label>@Messages.AdditionalToppingsLabel:</label>
-				@if (ViewModel.Toppings == null)
-				{
-					<select class="custom-select" disabled>
-						<option>(@Messages.LoadingText)</option>
-					</select>
-				}
-				else if (CustomPizza.HasMaximumToppings)
-				{
-					<div>(@Messages.HasmaximumToppingsText)</div>
-				}
-				else
-				{
-					<select class="form-select"
-							@onchange=ToppingSelected>
-						<option value="-1" disabled selected>
-							(@Messages.SelectToppingOptionText)
-						</option>
-						@foreach (var Topping in ViewModel.Toppings)
-						{
-							<option value="@Topping.Id">
-								@Topping.GetFormattedNameWithPrice()
-							</option>
-						}
-					</select>
-				}
-			</div>
-			<div class="toppings">
-				@foreach (var Topping in CustomPizza.Toppings)
-				{
-					<div class="topping">
-						@Topping.Name
-						<span class="topping-price">
-							@Topping.GetFormattedPrice()
-						</span>
-						<button type="button" class="delete-topping"
-						@onclick=@(() => CustomPizza.RemoveTopping(Topping))> 
-							X
-						</button>
-					</div>
-				}
-			</div>
-		</form>
-		<div class="dialog-buttons">
-			<button class="btn btn-secondary" @onclick="OnCancel">
-				@Messages.CancelButtonText
-			</button>
-			<span>
-				@Messages.PriceText
-				<span class="price">
-					@CustomPizza.GetFormattedTotalPrice()
-				</span>
-			</span>
-			<button class="btn btn-success" @onclick="OnConfirm">
-				@Messages.OrderButtonText
-			</button>
-		</div>
-
-	</div>
+    <div class="dialog">
+        <div class="dialog-title">
+            <h2>@CustomPizza.Special.Name</h2>
+            @CustomPizza.Special.Description
+        </div>
+        <form class="dialog-body">
+            <div>
+                <label>@Messages.CustomPizzaSizeLabel:</label>
+                <input type="range"
+                       min="@Options.Value.MinimumPizzaSize"
+                       max="@Options.Value.MaximumPizzaSize"
+                       step="@Options.Value.SizeIncrement"
+                       @bind= CustomPizza.Size 
+                       @bind:event= "oninput"
+                       />
+                <span class="size-label">
+                    @CustomPizza.GetFormattedSizeWithTotalPrice()
+                </span>
+            </div>
+            <div>
+                <label>@Messages.AdditionalToppingsLabel:</label>
+                @if (ViewModel.Toppings == null)
+                {
+                    <select class="custom-select" disabled>
+                        <option>(@Messages.LoadingText)</option>
+                    </select>
+                }
+                else if (CustomPizza.HasMaximumToppings)
+                {
+                    <div>(@Messages.HasmaximumToppingsText)</div>
+                }
+                else
+                {
+                    <select class="form-select"
+                            @onchange= ToppingSelected>
+                        <option value="-1" disabled selected>
+                            (@Messages.SelectToppingOptionText)
+                        </option>
+                        @foreach (var Topping in ViewModel.Toppings)
+                        {
+                            <option value="@Topping.Id">
+                                @Topping.GetFormattedNameWithPrice()
+                            </option>
+                        }
+                    </select>
+                }
+            </div>
+            <div class="toppings">
+                @foreach (var Topping in CustomPizza.Toppings)
+                {
+                    <div class="topping">
+                        @Topping.Name
+                        <span class="topping-price">
+                            @Topping.GetFormattedPrice()
+                        </span>
+                        <button type="button" class="delete-topping"
+                                @onclick= @(() => CustomPizza.RemoveTopping(Topping))>
+                            x
+                        </button>
+                    </div>
+                }
+            </div>
+        </form>
+        <div class="dialog-buttons">
+            <button class="btn btn-secondary" @onclick= OnCancel>
+                @Messages.CancelButtonText
+            </button>
+            <span>
+                @Messages.PriceText
+                <span class="price">
+                    @CustomPizza.GetFormattedTotalPrice()
+                </span>
+            </span>
+            <button class="btn btn-success" @onclick= OnConfirm>
+                @Messages.OrderButtonText
+            </button>
+        </div>
+    </div>
 </div>
