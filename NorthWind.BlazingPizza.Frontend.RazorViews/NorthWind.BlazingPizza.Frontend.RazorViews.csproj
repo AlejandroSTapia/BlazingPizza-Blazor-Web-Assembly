@@ -25,19 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.6" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.ViewModels\NorthWind.BlazingPizza.Frontend.ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Components\OrderedPizzas.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.6" />
   </ItemGroup>
 
 

@@ -54,8 +54,8 @@
                         <span class="topping-price">
                             @Topping.GetFormattedPrice()
                         </span>
-                        <button type="button" class="delete-topping"
-                                @onclick= @(() => CustomPizza.RemoveTopping(Topping))>
+                        <button type="button" class="delete-topping" 
+                        @onclick= @(() => CustomPizza.RemoveTopping(Topping)) >
                             x
                         </button>
                     </div>
@@ -63,7 +63,7 @@
             </div>
         </form>
         <div class="dialog-buttons">
-            <button class="btn btn-secondary" @onclick= OnCancel>
+            <button class="btn btn-secondary" @onclick= "OnCancel">
                 @Messages.CancelButtonText
             </button>
             <span>
@@ -72,7 +72,7 @@
                     @CustomPizza.GetFormattedTotalPrice()
                 </span>
             </span>
-            <button class="btn btn-success" @onclick= OnConfirm>
+            <button class="btn btn-success" @onclick= "OnConfirm">
                 @Messages.OrderButtonText
             </button>
         </div>
