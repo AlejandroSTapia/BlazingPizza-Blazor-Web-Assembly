@@ -1,9 +1,11 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
 
 @Messages.AppTitle
 
-<Specials OnClickSpecial="ViewModel.ConfigurePizza"/>
-<OrderedPizzas ShoppingCart="ShoppingCart" />
+<PageTitle>@Messages.AppTitle</PageTitle>
+<Specials OnClickSpecial="ViewModel.ConfigurePizza"></Specials>
+<OrderedPizzas ShoppingCart="ShoppingCart"></OrderedPizzas>
 
 @if(ViewModel.ShowConfigurePizzaDialog)
 {

@@ -6,7 +6,7 @@ using NorthWind.BlazingPizza.Frontend.ViewModels.ConfigurePizzaDialog;
 
 namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
 {
-    public partial class ConfigurePizzaDialog: ComponentBase
+    public partial class ConfigurePizzaDialog
     {
         [Inject]
         ConfigurePizzaDialogViewModel ViewModel { get; set; }
@@ -15,22 +15,18 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
         [Parameter]
         public CustomPizza CustomPizza { get; set; }
         [Parameter]
-        public EventCallback OnCancel { get; set; } //llamada de regreso
+        public EventCallback OnCancel { get; set; }
         [Parameter]
         public EventCallback OnConfirm { get; set; }
 
-        //manejador de evento cuadno se inicialice
         protected override async Task OnInitializedAsync()
         {
             await ViewModel.GetToppingsAsync();
         }
 
-        //cuando se seleccione un topping
         void ToppingSelected(ChangeEventArgs e) =>
-            CustomPizza.AddTopping( //CustomPizza.AddTopping es un agregado y su proposito es que proteja o add logica de los datos(validaciones)
+            CustomPizza.AddTopping(
                 ViewModel.Toppings
-                .First(t => t.Id == Convert.ToInt32(e.Value)));
-
-        //Se coloca aqui en el code begin y no en el viewmodel. por el changeEvent
+                    .First(t => t.Id == Convert.ToInt32(e.Value)));
     }
 }

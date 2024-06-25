@@ -1,16 +1,16 @@
 ﻿<div class="cart-item">
-	<a @onclick= OnRemoved class="delete-item"> X </a>
-	<div class="title">
-		<span>@CustomPizza.Size</span>
-		@CustomPizza.Special.Name
-	</div>
-	<ul>
-		@foreach(var Topping in CustomPizza.Toppings)
-		{
-			<li>+ @Topping.Name</li>
-		}
-	</ul>
-	<div class="item-price">
-		@CustomPizza.GetFormattedTotalPrice()
-	</div>
+    <a @onclick="OnRemoved" class="delete-item">X</a>
+    <div class="title">
+        <span>@CustomPizza.Size</span>
+        @CustomPizza.Special.Name
+    </div>
+    <ul>
+        @foreach (var Topping in CustomPizza.Toppings)
+        {
+            <li>+ @Topping.Name</li>
+        }
+    </ul>
+    <div class="item-price">
+        @CustomPizza.GetFormattedTotalPrice()
+    </div>
 </div>

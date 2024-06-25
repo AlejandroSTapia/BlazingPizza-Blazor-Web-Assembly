@@ -7,7 +7,7 @@
 			@foreach(var Pizza in ShoppingCart.Pizzas)
 			{
 				<OrderedPizza CustomPizza="Pizza" 
-					OnRemoved="(() => ShoppingCart.RemovePizza(Pizza)) "/>
+					OnRemoved="(() => ShoppingCart.RemovePizza(Pizza))"></OrderedPizza>
 			}
 		</div>
 	}
