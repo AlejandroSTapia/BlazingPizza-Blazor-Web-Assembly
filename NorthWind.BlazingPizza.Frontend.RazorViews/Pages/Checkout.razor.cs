@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using NorthWind.BlazingPizza.Frontend.ViewModels.Checkout;
 
 namespace NorthWind.BlazingPizza.Frontend.RazorViews.Pages
@@ -6,14 +6,14 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Pages
     public partial class Checkout
     {
         [Inject]
-        CheckoutViewModel ViewModel { get; set; }
+        CheckoutViewModel viewModel { get; set; }
         [Inject]
-        NavigationManager NavigationManager { get; set; }
+        NavigationManager navigationManager { get; set; }
 
-        async Task Placer()
+        async Task PlacerOrder()
         {
-            await ViewModel.PlaceOrderAsync();
-            NavigationManager.NavigateTo("/");
+            await viewModel.PlaceOrderAsync();
+            navigationManager.NavigateTo("/");
         }
     }
 }

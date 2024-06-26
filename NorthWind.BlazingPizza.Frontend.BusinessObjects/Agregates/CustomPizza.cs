@@ -29,7 +29,7 @@ namespace NorthWind.BlazingPizza.Frontend.BusinessObjects.Agregates
 			ToppingsField.Count >= Options.MaximumCustomPizzaToppings;
 
 		//para no repetir los ingredientes, con uso del agregado(la clase)
-		public void AddTopping(ToppingDto topping)
+		public void AddToppings(ToppingDto topping)
 		{
 			if (!ToppingsField.Contains(topping))
 			{

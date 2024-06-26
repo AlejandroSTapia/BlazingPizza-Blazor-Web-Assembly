@@ -1,17 +1,16 @@
 ﻿@page "/checkout"
 
-<TopBar/>
+<TopBar></TopBar>
 <div class="main">
-	<div class="checkout-cols">
-		<div>
-			<h4>@Messages.ReviewOrderText</h4>
-			<OrderReview/>
-		</div>
-	</div>
-	<button class="checkout-button btn btn-warning"
-	@onclick=PlaceOrder
-	disabled="@ViewModel.IsSubmitting">
-		@Messages.PlaceOrderButtonText
-	</button>
+    <div class="checkout-cols">
+        <div>
+            <h4>@Messages.ReviewOrderText</h4>
+            <OrderReview></OrderReview>
+        </div>
+    </div>
+    <button class="checkout-button btn btn-warning"
+            @onclick=PlacerOrder
+            disabled="@viewModel.IsSubmitting">
+        @Messages.PlaceOrderButtonText
+    </button>
 </div>
-

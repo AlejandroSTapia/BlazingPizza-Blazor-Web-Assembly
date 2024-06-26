@@ -1,20 +1,19 @@
-﻿
-@* este copoinente se encargara de configurar el ambeinte de blazor
-sera el papa de los compenetes *@
-<Router AppAssembly="typeof(App).Assembly"> @*  ensamblado donde estan las paginas (osea aqui)*@
-	<Found Context="context"> @* aqui vienen los datos d ela url que solicito el usuario *@
-		<RouteView RouteData="context"
-			DefaultLayout="typeof(MainLayout)"/>
-			<FocusOnNavigate RouteData="context" Selector="h1"/>
-	</Found>
-	<NotFound>
-		<PageTitle>
-			@Messages.ResourceNotFoundPageTitle
-		</PageTitle>
-		<LayoutView Layout="typeof(MainLayout)">
-			<p role="alert">
-				@Messages.ResourceNotFountErrorMessage
-			</p>
-		</LayoutView>
-	</NotFound>
+﻿<Router AppAssembly="typeof(App).Assembly">
+    <Found>
+        <RouteView RouteData="context"
+                   DefaultLayout="typeof(MainLayout)"/>
+        <FocusOnNavigate RouteData="context" Selector="h1"></FocusOnNavigate>
+            
+        
+    </Found>
+    <NotFound>
+        <PageTitle>
+            @Messages.ResourceNotFoundPageTitle
+        </PageTitle>
+        <LayoutView Layout="typeof(MainLayout)">
+            <p role="alert">
+                @Messages.ResourceNotFoundErrorMessage
+            </p>
+        </LayoutView>
+    </NotFound>
 </Router>

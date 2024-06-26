@@ -25,7 +25,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
         }
 
         void ToppingSelected(ChangeEventArgs e) =>
-            CustomPizza.AddTopping(
+            CustomPizza.AddToppings(
                 ViewModel.Toppings
                     .First(t => t.Id == Convert.ToInt32(e.Value)));
     }

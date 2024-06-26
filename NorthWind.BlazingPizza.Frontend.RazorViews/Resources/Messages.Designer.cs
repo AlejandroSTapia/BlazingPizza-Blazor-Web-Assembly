@@ -97,7 +97,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Elegir Pizza.
+        ///   Busca una cadena traducida similar a Elegir pizza.
         /// </summary>
         internal static string ChoosePizzaLinkText {
             get {
@@ -115,11 +115,11 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Maximo alcanzado.
+        ///   Busca una cadena traducida similar a maximo alcanzado.
         /// </summary>
-        internal static string HasmaximumToppingsText {
+        internal static string HasMaximumToppingsText {
             get {
-                return ResourceManager.GetString("HasmaximumToppingsText", resourceCulture);
+                return ResourceManager.GetString("HasMaximumToppingsText", resourceCulture);
             }
         }
         
@@ -160,20 +160,20 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Lo lamentamos, no existe nada en esta dirección..
+        /// </summary>
+        internal static string ResourceNotFoundErrorMessage {
+            get {
+                return ResourceManager.GetString("ResourceNotFoundErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Recurso no encontrado.
         /// </summary>
         internal static string ResourceNotFoundPageTitle {
             get {
                 return ResourceManager.GetString("ResourceNotFoundPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Lo lamentamos, no existe nada en esta dirección.
-        /// </summary>
-        internal static string ResourceNotFountErrorMessage {
-            get {
-                return ResourceManager.GetString("ResourceNotFountErrorMessage", resourceCulture);
             }
         }
         
@@ -187,7 +187,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Selecciona una pizza para empezar.
+        ///   Busca una cadena traducida similar a Seleccione una pizza para empezar.
         /// </summary>
         internal static string SelectPizzaText {
             get {
@@ -205,7 +205,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Precio total.
+        ///   Busca una cadena traducida similar a Precio total:.
         /// </summary>
         internal static string TotalPriceText {
             get {
@@ -223,7 +223,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Tu pedido.
+        ///   Busca una cadena traducida similar a Tu Pedido.
         /// </summary>
         internal static string YourOrderText {
             get {

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.RazorViews\NorthWind.BlazingPizza.Frontend.RazorViews.csproj" />
+    <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.ViewModels\NorthWind.BlazingPizza.Frontend.ViewModels.csproj" />
     <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.WebApiProxies\NorthWind.BlazingPizza.Frontend.WebApiProxies.csproj" />
   </ItemGroup>
 

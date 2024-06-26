@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.WebApiProxies\NorthWind.BlazingPizza.Frontend.WebApiProxies.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.BlazingPizza.Frontend.BusinessObjects\NorthWind.BlazingPizza.Frontend.BusinessObjects.csproj" />
   </ItemGroup>
 
 </Project>

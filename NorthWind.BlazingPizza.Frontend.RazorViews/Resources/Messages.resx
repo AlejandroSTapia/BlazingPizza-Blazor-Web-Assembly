@@ -130,13 +130,13 @@
     <value>Ordenar &gt;</value>
   </data>
   <data name="ChoosePizzaLinkText" xml:space="preserve">
-    <value>Elegir Pizza</value>
+    <value>Elegir pizza</value>
   </data>
   <data name="CustomPizzaSizeLabel" xml:space="preserve">
     <value>Tamaño</value>
   </data>
-  <data name="HasmaximumToppingsText" xml:space="preserve">
-    <value>Maximo alcanzado</value>
+  <data name="HasMaximumToppingsText" xml:space="preserve">
+    <value>maximo alcanzado</value>
   </data>
   <data name="LoadingText" xml:space="preserve">
     <value>Cargando...</value>
@@ -150,28 +150,28 @@
   <data name="PriceText" xml:space="preserve">
     <value>Precio</value>
   </data>
+  <data name="ResourceNotFoundErrorMessage" xml:space="preserve">
+    <value>Lo lamentamos, no existe nada en esta dirección.</value>
+  </data>
   <data name="ResourceNotFoundPageTitle" xml:space="preserve">
     <value>Recurso no encontrado</value>
-  </data>
-  <data name="ResourceNotFountErrorMessage" xml:space="preserve">
-    <value>Lo lamentamos, no existe nada en esta dirección</value>
   </data>
   <data name="ReviewOrderText" xml:space="preserve">
     <value>Revisar la orden</value>
   </data>
   <data name="SelectPizzaText" xml:space="preserve">
-    <value>Selecciona una pizza para empezar</value>
+    <value>Seleccione una pizza para empezar</value>
   </data>
   <data name="SelectToppingOptionText" xml:space="preserve">
     <value>Selecciona</value>
   </data>
   <data name="TotalPriceText" xml:space="preserve">
-    <value>Precio total</value>
+    <value>Precio total:</value>
   </data>
   <data name="TotalText" xml:space="preserve">
     <value>Total</value>
   </data>
   <data name="YourOrderText" xml:space="preserve">
-    <value>Tu pedido</value>
+    <value>Tu Pedido</value>
   </data>
 </root>

@@ -1,31 +1,32 @@
 ﻿<div class="sidebar">
-	@if(ShoppingCart.HasPizzas)
-	{
-		<div class="order-contents">
-			<h2>@Messages.YourOrderText</h2>
+    @if (ShoppingCart.HasPizzas)
+    {
+        <div class="order-contents">
+            <h2>@Messages.YourOrderText</h2>
+            @foreach (var Pizza in ShoppingCart.Pizzas)
+            {
+                <OrderedPizza CustomPizza="Pizza"
+                              OnRemoved="(() => ShoppingCart.RemovePizza(Pizza))"></OrderedPizza>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="empty-cart">
+            @Messages.SelectPizzaText
+        </div>
+    }
+    <div class="order-total-container">
+        <div class="order-total @(ShoppingCart.HasPizzas ?"":"hidden")">
+            @Messages.TotalText:
+            <span class="total-price">
+                @ShoppingCart.GetFormattedTotalPrice()
+            </span>
+            <a href="checkout" class="btn btn-warning">
+                @Messages.CheckoutLinkText
+            </a>
+        </div>
 
-			@foreach(var Pizza in ShoppingCart.Pizzas)
-			{
-				<OrderedPizza CustomPizza="Pizza" 
-					OnRemoved="(() => ShoppingCart.RemovePizza(Pizza))"></OrderedPizza>
-			}
-		</div>
-	}
-	else
-	{
-		<div class="empty-cart">
-			@Messages.SelectPizzaText
-			</div>
-	}
-	<div class="order-total-container">
-		<div class="order-total @(ShoppingCart.HasPizzas ? "" : "hidden")">
-			@Messages.TotalText:
-			<span class="total-price">
-				@ShoppingCart.GetFormattedTotalPrice()
-			</span>
-			<a href="checkout" class="btn btn-warning">
-			@Messages.CheckoutLinkText	
-			</a>
-		</div>
-	</div>
+    </div>
+
 </div>

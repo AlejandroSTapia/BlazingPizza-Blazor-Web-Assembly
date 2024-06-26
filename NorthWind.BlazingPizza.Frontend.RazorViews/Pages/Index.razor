@@ -1,17 +1,14 @@
 ﻿@page "/"
-@using Microsoft.AspNetCore.Components.Web
-
-@Messages.AppTitle
 
 <PageTitle>@Messages.AppTitle</PageTitle>
-<TopBar/>
+<TopBar />
 <Specials OnClickSpecial="ViewModel.ConfigurePizza"></Specials>
 <OrderedPizzas ShoppingCart="ShoppingCart"></OrderedPizzas>
 
-@if(ViewModel.ShowConfigurePizzaDialog)
+@if (ViewModel.ShowConfigurePizzaDialog)
 {
-	<ConfigurePizzaDialog CustomPizza="ViewModel.CustomPizza"
-	OnCancel="ViewModel.CancelConfigurePizza"
-	OnConfirm="ViewModel.ConfirmConfigurePizza" />
+    <ConfigurePizzaDialog CustomPizza="ViewModel.CustomPizza"
+                          OnCancel="ViewModel.CancelConfigurePizza"
+                          OnConfirm="ViewModel.ConfirmConfigurePizza"></ConfigurePizzaDialog>
 }
 
