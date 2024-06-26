@@ -8,7 +8,10 @@
 			<OrderReview/>
 		</div>
 	</div>
-	<button class="checkout-button btn btn-warning">
+	<button class="checkout-button btn btn-warning"
+	@onclick=PlaceOrder
+	disabled="@ViewModel.IsSubmitting">
 		@Messages.PlaceOrderButtonText
 	</button>
 </div>
+

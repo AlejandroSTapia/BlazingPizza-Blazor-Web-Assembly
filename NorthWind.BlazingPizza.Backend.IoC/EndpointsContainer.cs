@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using NorthWind.BlazingPizza.Backend.Controllers;
 using NorthWind.BlazingPizza.Backend.Controllers.GetSpecials;
 using NorthWind.BlazingPizza.Backend.Controllers.GetToppings;
 using System;
@@ -14,8 +15,8 @@ namespace NorthWind.BlazingPizza.Backend.IoC;
 	public static WebApplication UseBlazingpizzaEndpoints(
 		this WebApplication app)
 	{
-		app.UseGetSpecialsController();
-		app.UseGetToppingController();
+		app.UseBlazingPizzaControllers();
+
 		return app;
 	}
 }

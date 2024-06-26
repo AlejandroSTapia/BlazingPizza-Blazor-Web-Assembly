@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace NorthWind.BlazingPizza.Backend.Controllers.GetSpecials
 {
 	//sirve como puerta de entrada y definir endpoint
-	public static class GetSpecialsController
+	internal static class GetSpecialsController
 	{
 		public static WebApplication UseGetSpecialsController( this WebApplication app) //se extiende WebApplication
 		{

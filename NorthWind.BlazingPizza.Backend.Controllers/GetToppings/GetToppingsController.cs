@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Backend.Controllers.GetToppings
 {
-	public static class GetToppingsController 
+	internal static class GetToppingsController 
 	{
 		public static WebApplication UseGetToppingController(
 			this WebApplication app)

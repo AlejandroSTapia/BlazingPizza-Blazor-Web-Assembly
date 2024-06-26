@@ -24,6 +24,8 @@ namespace NorthWind.BlazingPizza.EFCore.DataSources
 			services.AddScoped<IToppingDataSource, ToppingDataSource>();
 
 		services.Configure(configureDBOptions);
+
+			services.AddScoped<IPlaceOrderDataSource, PlaceOrderDataSource>();
 		return services;
 	}
    }

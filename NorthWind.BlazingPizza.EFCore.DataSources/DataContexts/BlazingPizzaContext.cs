@@ -25,5 +25,7 @@ namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 
 		public DbSet<PizzaSpecial> PizzaSpecials { get; set; }
 		public DbSet<Topping> Toppings { get; set; }
-	}
+        public DbSet<CustomPizza> CustomPizzas { get; set; }
+        public DbSet<Order> Orders { get; set; }
+    }
 }
