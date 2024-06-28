@@ -3,43 +3,58 @@ using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.Checkout;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetSpecials;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetToppings;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.Checkout;
+using NorthWind.BlazingPizza.Frontend.WebApiProxies.Common;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.GetSpecials;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.GetToppings;
+using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
 
 namespace NorthWind.BlazingPizza.Frontend.WebApiProxies
 {
-	//Aqui se registran las dependencias
-	public static class DependencyContainer
-	{
-		//este proyecto agrega modelos
-		//AddModels metodo de extension para reguistrar las implementacioones
-		public static IServiceCollection AddModels(this IServiceCollection services,
-			Action<HttpClient> configureGetSpecialsModelHttpClient,
-			Action<IHttpClientBuilder> getSpecialsHttpClientBuilder,
-			Action<HttpClient> configureGetToppingsModelHttpClient,
-			Action<IHttpClientBuilder> getToppingsHttpClientBuilder)//configurador
-		{
-			// Se debe implementar el servicio y registrarlo en la coleccion de servcios del contendedor de inyeccion
-			//services.AddScoped<IGetSpecialsModel, GetSpecialsModel>();
+    //Aqui se registran las dependencias
+    public static class DependencyContainer
+    {
+        //este proyecto agrega modelos
+        //AddModels metodo de extension para reguistrar las implementacioones
+        public static IServiceCollection AddModels(
+            this IServiceCollection services,
+            HttpClientConfigurator getSpecialsModelConfigurator,
+            HttpClientConfigurator getToppingsModelConfigurator,
+            HttpClientConfigurator getCheckoutModelConfigurator
+            )//configuradores
+        {
+            // Se debe implementar el servicio y registrarlo en la coleccion de servcios del contendedor de inyeccion
+            //services.AddScoped<IGetSpecialsModel, GetSpecialsModel>();
 
-			//Con esto se agrega el cliente
-			IHttpClientBuilder Builder = services
-				.AddHttpClient<IGetSpecialsModel, GetSpecialsModel>(configureGetSpecialsModelHttpClient);
+            services.AddHttpClient<IGetSpecialsModel,GetSpecialsModel>(getSpecialsModelConfigurator);
 
-			//seguridad de tokens?
-			getSpecialsHttpClientBuilder?.Invoke(Builder);
+            services.AddHttpClient<IGetToppingsModel, GetToppingsModel>(getToppingsModelConfigurator);
 
-			IHttpClientBuilder GetToppingsBuilder = services
-				.AddHttpClient<IGetToppingsModel, GetToppingsModel>(configureGetToppingsModelHttpClient);
+            services.AddHttpClient<ICheckoutModel, CheckoutModel>(getCheckoutModelConfigurator);
 
-			getToppingsHttpClientBuilder?.Invoke(Builder);
+            return services;
+        }
 
-			services.AddScoped<ICheckoutModel, CheckoutModel>();
-			return services;
-		}
-	}
+        //fabricas de clientes https para enviar unhttpCLient bien estructurado y configurado
+        //Con eso ya se puede construir clients hhtp
 
-	//fabricas de clientes https para enviar unhttpCLient bien estructurado y configurado
-	//Con eso ya se puede construir clients hhtp
 
+        //prpio httpclient y no de netcore
+        static IServiceCollection AddHttpClient<TClient, TImplementation>(
+            this IServiceCollection services,
+            HttpClientConfigurator configurator
+            )
+            where TClient : class //primer condicion
+            where TImplementation : class, TClient
+        {
+            var Builder = services.AddHttpClient<TClient, TImplementation>(
+                configurator.ConfigureHttpClient);
+
+            configurator.ConfigureNamedHttpClient?.Invoke(Builder);
+
+            return services;
+        }
+    }
+
+ 
 }
