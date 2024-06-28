@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -7,13 +8,28 @@
 namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class AddOrderAndRelatedEntities : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
                 name: "blazingPizza");
+
+            migrationBuilder.CreateTable(
+                name: "Orders",
+                schema: "blazingPizza",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.Id);
+                });
 
             migrationBuilder.CreateTable(
                 name: "PizzaSpecials",
@@ -45,6 +61,64 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Toppings", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CustomPizza",
+                schema: "blazingPizza",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OrderId = table.Column<int>(type: "int", nullable: false),
+                    PizzaSpecialId = table.Column<int>(type: "int", nullable: false),
+                    Size = table.Column<int>(type: "int", nullable: false),
+                    TotalPrice = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CustomPizza", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CustomPizza_Orders_OrderId",
+                        column: x => x.OrderId,
+                        principalSchema: "blazingPizza",
+                        principalTable: "Orders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CustomPizza_PizzaSpecials_PizzaSpecialId",
+                        column: x => x.PizzaSpecialId,
+                        principalSchema: "blazingPizza",
+                        principalTable: "PizzaSpecials",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CustomPizzaTopping",
+                schema: "blazingPizza",
+                columns: table => new
+                {
+                    CustomPizzaId = table.Column<int>(type: "int", nullable: false),
+                    ToppingId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CustomPizzaTopping", x => new { x.CustomPizzaId, x.ToppingId });
+                    table.ForeignKey(
+                        name: "FK_CustomPizzaTopping_CustomPizza_CustomPizzaId",
+                        column: x => x.CustomPizzaId,
+                        principalSchema: "blazingPizza",
+                        principalTable: "CustomPizza",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CustomPizzaTopping_Toppings_ToppingId",
+                        column: x => x.ToppingId,
+                        principalSchema: "blazingPizza",
+                        principalTable: "Toppings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
@@ -90,17 +164,47 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                     { 20, "Pollo bÃºfalo", 48.00m },
                     { 21, "Queso azul", 24.50m }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CustomPizza_OrderId",
+                schema: "blazingPizza",
+                table: "CustomPizza",
+                column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CustomPizza_PizzaSpecialId",
+                schema: "blazingPizza",
+                table: "CustomPizza",
+                column: "PizzaSpecialId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CustomPizzaTopping_ToppingId",
+                schema: "blazingPizza",
+                table: "CustomPizzaTopping",
+                column: "ToppingId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PizzaSpecials",
+                name: "CustomPizzaTopping",
+                schema: "blazingPizza");
+
+            migrationBuilder.DropTable(
+                name: "CustomPizza",
                 schema: "blazingPizza");
 
             migrationBuilder.DropTable(
                 name: "Toppings",
+                schema: "blazingPizza");
+
+            migrationBuilder.DropTable(
+                name: "Orders",
+                schema: "blazingPizza");
+
+            migrationBuilder.DropTable(
+                name: "PizzaSpecials",
                 schema: "blazingPizza");
         }
     }

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Backend.Repositories.Entities
 {
+    [Table("CustomPizza", Schema = "blazingPizza")]
     public class CustomPizza
     {
         public int Id { get; set; }
