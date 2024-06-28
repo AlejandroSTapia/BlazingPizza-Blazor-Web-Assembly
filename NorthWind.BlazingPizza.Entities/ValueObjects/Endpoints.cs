@@ -14,5 +14,6 @@ namespace NorthWind.BlazingPizza.Entities.ValueObjects
 		//nuevo enpoint? nueva constante
 		public const string GetToppings = $"/{nameof(GetToppings)}";
         public const string PlaceOrder = $"/{nameof(PlaceOrder)}";
+		public const string GetOrders = $"/{nameof(GetOrders)}";
     }
 }

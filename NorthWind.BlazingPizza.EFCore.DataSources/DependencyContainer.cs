@@ -13,20 +13,22 @@ using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources
 {
-	public static class DependencyContainer
-	{
-	public static IServiceCollection AddDataSources(
-		this IServiceCollection services,
-		Action<DBOptions> configureDBOptions)
-	{
-		services.AddScoped<IPizzaSpecialDataSource, PizzaSpecialDataSource>();
+    public static class DependencyContainer
+    {
+        public static IServiceCollection AddDataSources(
+            this IServiceCollection services,
+            Action<DBOptions> configureDBOptions)
+        {
+            services.AddScoped<IPizzaSpecialDataSource, PizzaSpecialDataSource>();
 
-			services.AddScoped<IToppingDataSource, ToppingDataSource>();
+            services.AddScoped<IToppingDataSource, ToppingDataSource>();
 
-		services.Configure(configureDBOptions);
+            services.Configure(configureDBOptions);
 
-			services.AddScoped<IPlaceOrderDataSource, PlaceOrderDataSource>();
-		return services;
-	}
-   }
+            services.AddScoped<IPlaceOrderDataSource, PlaceOrderDataSource>();
+
+            services.AddScoped<IOrderDataSource, OrderDataSource>();
+            return services;
+        }
+    }
 }
