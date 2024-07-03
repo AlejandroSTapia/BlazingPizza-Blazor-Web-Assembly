@@ -135,14 +135,26 @@
   <data name="CustomPizzaSizeLabel" xml:space="preserve">
     <value>Tamaño</value>
   </data>
+  <data name="EmptyOrdersText" xml:space="preserve">
+    <value>No se ha realizado alguna orden</value>
+  </data>
   <data name="HasMaximumToppingsText" xml:space="preserve">
     <value>maximo alcanzado</value>
   </data>
   <data name="LoadingText" xml:space="preserve">
     <value>Cargando...</value>
   </data>
+  <data name="MyOrdersText" xml:space="preserve">
+    <value>Mis órdenes</value>
+  </data>
+  <data name="OrderAnyPizzaText" xml:space="preserve">
+    <value>Ordena alguna pizza</value>
+  </data>
   <data name="OrderButtonText" xml:space="preserve">
     <value>Ordenar</value>
+  </data>
+  <data name="PizzasText" xml:space="preserve">
+    <value>Pizzas:</value>
   </data>
   <data name="PlaceOrderButtonText" xml:space="preserve">
     <value>Realizar pedido</value>
@@ -165,11 +177,17 @@
   <data name="SelectToppingOptionText" xml:space="preserve">
     <value>Selecciona</value>
   </data>
+  <data name="StatusText" xml:space="preserve">
+    <value>Estado:</value>
+  </data>
   <data name="TotalPriceText" xml:space="preserve">
     <value>Precio total:</value>
   </data>
   <data name="TotalText" xml:space="preserve">
     <value>Total</value>
+  </data>
+  <data name="TrackText" xml:space="preserve">
+    <value>Rastrear &gt;</value>
   </data>
   <data name="YourOrderText" xml:space="preserve">
     <value>Tu Pedido</value>

@@ -115,6 +115,15 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No se ha realizado alguna orden.
+        /// </summary>
+        internal static string EmptyOrdersText {
+            get {
+                return ResourceManager.GetString("EmptyOrdersText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a maximo alcanzado.
         /// </summary>
         internal static string HasMaximumToppingsText {
@@ -133,11 +142,38 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Mis órdenes.
+        /// </summary>
+        internal static string MyOrdersText {
+            get {
+                return ResourceManager.GetString("MyOrdersText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ordena alguna pizza.
+        /// </summary>
+        internal static string OrderAnyPizzaText {
+            get {
+                return ResourceManager.GetString("OrderAnyPizzaText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ordenar.
         /// </summary>
         internal static string OrderButtonText {
             get {
                 return ResourceManager.GetString("OrderButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Pizzas:.
+        /// </summary>
+        internal static string PizzasText {
+            get {
+                return ResourceManager.GetString("PizzasText", resourceCulture);
             }
         }
         
@@ -205,6 +241,15 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Estado:.
+        /// </summary>
+        internal static string StatusText {
+            get {
+                return ResourceManager.GetString("StatusText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Precio total:.
         /// </summary>
         internal static string TotalPriceText {
@@ -219,6 +264,15 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         internal static string TotalText {
             get {
                 return ResourceManager.GetString("TotalText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Rastrear &gt;.
+        /// </summary>
+        internal static string TrackText {
+            get {
+                return ResourceManager.GetString("TrackText", resourceCulture);
             }
         }
         

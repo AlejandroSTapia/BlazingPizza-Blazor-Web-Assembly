@@ -59,7 +59,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.Back
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.WebApi", "NorthWind.BlazingPizza.WebApi\NorthWind.BlazingPizza.WebApi.csproj", "{E4A0222D-5263-4776-AD99-7819B3C6DFFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazingPizza.Frontend.RazorViews", "NorthWind.BlazingPizza.Frontend.RazorViews\NorthWind.BlazingPizza.Frontend.RazorViews.csproj", "{3D60A477-8E96-4F07-8236-9993D7D0B236}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.Frontend.RazorViews", "NorthWind.BlazingPizza.Frontend.RazorViews\NorthWind.BlazingPizza.Frontend.RazorViews.csproj", "{3D60A477-8E96-4F07-8236-9993D7D0B236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

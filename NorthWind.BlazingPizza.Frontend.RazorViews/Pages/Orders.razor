@@ -1,0 +1,48 @@
+﻿@page "/orders"
+@using NorthWind.BlazingPizza.Entities.Extensions
+
+<TopBar/>
+<div class="main">
+    @if(ViewModel.Orders == null){
+        <text>@Messages.LoadingText</text>
+    }
+    else if (!ViewModel.Orders.Any())
+    {
+        <h2>@Messages.EmptyOrdersText</h2>
+        <a class="btn btn-success" href="">
+            @Messages.OrderAnyPizzaText
+        </a>
+    }
+    else
+    {
+        <div class="list-group orders-list">
+            @foreach(var Item in ViewModel.Orders)
+            {
+                <div class="list-group-item">
+                    <div class="col">
+                        <h5>@Item.CreatedTime.ToLongDateString</h5>
+                        @Messages.PizzasText
+                        <strong>@Item.PizzasCount</strong>
+                        @Messages.TotalPriceText
+                        <strong>@Item.GetFormattedTotalPrice()</strong>
+                    </div>
+
+                    <div class="col">
+                        @Messages.StatusText
+                        <strong>@Item.Status.ToFriendlyString()</strong>
+                    </div>
+                    @if(Item.Status != Entities.Enums.OrderStatus.Delivered)
+                    {
+                        <div class="col text-right">
+                            <a href="orderdetails/@Item.Id"
+                            class="btn btn-success"></a>
+                            @Messages.TrackText
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
+
+

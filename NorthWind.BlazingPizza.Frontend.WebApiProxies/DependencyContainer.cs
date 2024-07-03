@@ -2,10 +2,12 @@
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.Checkout;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetSpecials;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.GetToppings;
+using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.Orders;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.Checkout;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.Common;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.GetSpecials;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.GetToppings;
+using NorthWind.BlazingPizza.Frontend.WebApiProxies.Orders;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 
@@ -20,7 +22,8 @@ namespace NorthWind.BlazingPizza.Frontend.WebApiProxies
             this IServiceCollection services,
             HttpClientConfigurator getSpecialsModelConfigurator,
             HttpClientConfigurator getToppingsModelConfigurator,
-            HttpClientConfigurator getCheckoutModelConfigurator
+            HttpClientConfigurator getCheckoutModelConfigurator,
+            HttpClientConfigurator ordersModelConfigurator
             )//configuradores
         {
             // Se debe implementar el servicio y registrarlo en la coleccion de servcios del contendedor de inyeccion
@@ -31,6 +34,8 @@ namespace NorthWind.BlazingPizza.Frontend.WebApiProxies
             services.AddHttpClient<IGetToppingsModel, GetToppingsModel>(getToppingsModelConfigurator);
 
             services.AddHttpClient<ICheckoutModel, CheckoutModel>(getCheckoutModelConfigurator);
+
+            services.AddHttpClient<IOrdersModel, OrdersModel>(ordersModelConfigurator);
 
             return services;
         }
