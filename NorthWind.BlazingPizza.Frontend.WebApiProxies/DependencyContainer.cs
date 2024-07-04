@@ -8,8 +8,6 @@ using NorthWind.BlazingPizza.Frontend.WebApiProxies.Common;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.GetSpecials;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.GetToppings;
 using NorthWind.BlazingPizza.Frontend.WebApiProxies.Orders;
-using System.Runtime.CompilerServices;
-using System.Runtime.ConstrainedExecution;
 
 namespace NorthWind.BlazingPizza.Frontend.WebApiProxies
 {

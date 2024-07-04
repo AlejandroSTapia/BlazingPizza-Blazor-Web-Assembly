@@ -4,15 +4,10 @@ using NorthWind.BlazingPizza.Backend.Repositories.Entities;
 using NorthWind.BlazingPizza.Backend.Repositories.Interfaces;
 using NorthWind.BlazingPizza.EFCore.DataSources.Options;
 using NorthWind.BlazingPizza.Entities.Dtos.GetToppings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 {
-	internal class ToppingDataSource : BlazingPizzaContext,
+    internal class ToppingDataSource : BlazingPizzaContext,
 		IToppingDataSource
 	{
 		public ToppingDataSource(IOptions<DBOptions> options) : base(options)

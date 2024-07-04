@@ -20,7 +20,7 @@
             {
                 <div class="list-group-item">
                     <div class="col">
-                        <h5>@Item.CreatedTime.ToLongDateString</h5>
+                        <h5>@Item.CreatedTime.ToLongDateString()</h5>
                         @Messages.PizzasText
                         <strong>@Item.PizzasCount</strong>
                         @Messages.TotalPriceText
@@ -34,9 +34,9 @@
                     @if(Item.Status != Entities.Enums.OrderStatus.Delivered)
                     {
                         <div class="col text-right">
-                            <a href="orderdetails/@Item.Id"
-                            class="btn btn-success"></a>
-                            @Messages.TrackText
+                            <a href="orderdetails/@Item.Id" class="btn btn-success">
+                                @Messages.TrackText
+                            </a>
                         </div>
                     }
                 </div>

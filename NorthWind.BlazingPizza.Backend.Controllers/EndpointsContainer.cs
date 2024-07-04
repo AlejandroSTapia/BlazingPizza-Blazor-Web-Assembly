@@ -1,14 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using NorthWind.BlazingPizza.Backend.Controllers.GetOrder;
 using NorthWind.BlazingPizza.Backend.Controllers.GetOrders;
 using NorthWind.BlazingPizza.Backend.Controllers.GetSpecials;
 using NorthWind.BlazingPizza.Backend.Controllers.GetToppings;
 using NorthWind.BlazingPizza.Backend.Controllers.PlaceOrder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Backend.Controllers
 {
@@ -19,8 +14,10 @@ namespace NorthWind.BlazingPizza.Backend.Controllers
         {
             app.UseGetSpecialsController();
             app.UseGetToppingController();
-            app.UsePlaceorderController();
-            app.UseGetOrderController(); //se registra el endpoint creado en GetOrdersController
+            app.UsePlaceOrderController();
+            app.UseGetOrdersController(); //se registra el endpoint creado en GetOrdersController
+            app.UseGetOrderController();
+
             return app;
         }
     }

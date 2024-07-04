@@ -1,5 +1,4 @@
 using NorthWind.BlazingPizza.Frontend.ViewModels.Orders;
-using NorthWind.BlazingPizza.Entities.Extensions;
 using Microsoft.AspNetCore.Components;
 
 namespace NorthWind.BlazingPizza.Frontend.RazorViews.Pages

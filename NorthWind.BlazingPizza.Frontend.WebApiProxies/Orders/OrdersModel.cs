@@ -8,7 +8,6 @@ namespace NorthWind.BlazingPizza.Frontend.WebApiProxies.Orders
     internal class OrdersModel(HttpClient client) : IOrdersModel
     {
         public async Task<IEnumerable<GetOrdersDto>> GetOrdersAsync() =>
-            await client.GetFromJsonAsync<IEnumerable<GetOrdersDto>>(
-                Endpoints.GetOrders);
+           await client.GetFromJsonAsync<IEnumerable<GetOrdersDto>>(Endpoints.GetOrders);
     }
 }

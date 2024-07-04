@@ -1,15 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetSpecials;
-using NorthWind.BlazingPizza.Backend.BusinnesObjects.Options;
 using NorthWind.BlazingPizza.Backend.Repositories.Interfaces;
 using NorthWind.BlazingPizza.EFCore.DataSources.DataSources;
 using NorthWind.BlazingPizza.EFCore.DataSources.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources
 {
@@ -28,6 +20,7 @@ namespace NorthWind.BlazingPizza.EFCore.DataSources
             services.AddScoped<IPlaceOrderDataSource, PlaceOrderDataSource>();
 
             services.AddScoped<IOrderDataSource, OrderDataSource>();
+            services.AddScoped<IGetOrderDataSource, GetOrderDataSource>();
             return services;
         }
     }

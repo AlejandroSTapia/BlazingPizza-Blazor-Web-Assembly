@@ -1,14 +1,9 @@
 ﻿using NorthWind.BlazingPizza.Backend.Repositories.Entities;
 using NorthWind.BlazingPizza.Entities.Dtos.GetSpecials;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Backend.Repositories.Interfaces
 {
-	public interface IPizzaSpecialDataSource //este tiene los datos, yo no
+    public interface IPizzaSpecialDataSource //este tiene los datos, yo no
 	{
 		//para permitir hacer consultas, en lugar de traer todo
 		Task<IEnumerable<PizzaSpecialDto>> GetPizzaSpecialDtosFromQueryAsync(

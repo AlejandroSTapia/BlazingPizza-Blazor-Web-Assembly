@@ -4,11 +4,6 @@ using NorthWind.BlazingPizza.Backend.Repositories.Entities;
 using NorthWind.BlazingPizza.Backend.Repositories.Interfaces;
 using NorthWind.BlazingPizza.EFCore.DataSources.Options;
 using NorthWind.BlazingPizza.Entities.Dtos.GetOrders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 {
@@ -26,7 +21,8 @@ namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
             //necesitamos que incluya las pizzas(count, prop que falta en entidad) con include
             var QueryableOrders = Orders
                 .Include(o=> o.Pizzas);
-            return await queryBuilder(Orders).ToListAsync(); 
+            List<GetOrdersDto> getOrdersDtos = await queryBuilder(QueryableOrders).ToListAsync(); 
+            return getOrdersDtos;
         }
     }
 }

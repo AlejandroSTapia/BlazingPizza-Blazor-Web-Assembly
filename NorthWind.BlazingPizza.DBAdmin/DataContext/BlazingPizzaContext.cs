@@ -1,16 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NorthWind.BlazingPizza.Backend.Repositories.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 //Modelo de datos
 namespace NorthWind.BlazingPizza.DBAdmin.DataContext
 {
-	//el context de EF, es como una tabla temporal
-	internal class BlazingPizzaContext: DbContext
+    //el context de EF, es como una tabla temporal
+    internal class BlazingPizzaContext: DbContext
 	{
 		//indicar la bd a crear, motor de bd, sobreeescribiendo  OnConfiguring
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

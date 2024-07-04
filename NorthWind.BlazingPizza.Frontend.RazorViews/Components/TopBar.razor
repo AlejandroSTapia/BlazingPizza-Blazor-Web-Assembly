@@ -1,16 +1,16 @@
 ﻿<div class="top-bar">
     <a class="logo" href="">
-        <img src="@ImagePath/logo.svg"/>
+        <img src="@ImagePath/logo.svg" />
     </a>
 
-    <NavLink class="nav-tabs" href="" Match="NavLinkMatch.All"> @* CUnaod el url coincida completamente dond ese encuentre el usuario *@
-        <img src="@ImagePath/pizza-slice.svg"/>
-        <div>@Messages.ChoosePizzaLinkText</div>
+    <NavLink class="nav-tab" href="" Match="NavLinkMatch.All">
+        <img src="@ImagePath/pizza-slice.svg" />
+        @Messages.ChoosePizzaLinkText
     </NavLink>
 
-    <NavLink class="nav-tabs" href="orders">
+    <NavLink class="nav-tab" href="orders">
         <img src="@ImagePath/bike.svg" />
-        <div>@Messages.MyOrdersText</div>
+        @Messages.MyOrdersText
     </NavLink>
-</div>
 
+</div>

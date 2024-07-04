@@ -2,15 +2,10 @@
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetSpecials;
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Options;
 using NorthWind.BlazingPizza.Entities.Dtos.GetSpecials;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Backend.Presenters.GetSpecials
 {
-	internal class GetSpecialsPresenter(
+    internal class GetSpecialsPresenter(
 		IOptions<BlazingPizzaOptions> options) : IGetSpecialsOutputPort
 	{
 		public IEnumerable<PizzaSpecialDto> PizzaSpecials 

@@ -4,16 +4,11 @@ using NorthWind.BlazingPizza.Backend.Repositories.Entities;
 using NorthWind.BlazingPizza.Backend.Repositories.Interfaces;
 using NorthWind.BlazingPizza.EFCore.DataSources.Options;
 using NorthWind.BlazingPizza.Entities.Dtos.GetSpecials;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 {
-	//se implementa el servicio
-	internal class PizzaSpecialDataSource: BlazingPizzaContext, IPizzaSpecialDataSource
+    //se implementa el servicio
+    internal class PizzaSpecialDataSource: BlazingPizzaContext, IPizzaSpecialDataSource
 	{
 		public PizzaSpecialDataSource(IOptions<DBOptions> options): base(options)
 		{

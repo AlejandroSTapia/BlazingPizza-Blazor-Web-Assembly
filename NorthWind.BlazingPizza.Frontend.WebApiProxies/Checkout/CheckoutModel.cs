@@ -2,12 +2,7 @@
 using NorthWind.BlazingPizza.Entities.ValueObjects;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Interfaces.Checkout;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Frontend.WebApiProxies.Checkout
 {

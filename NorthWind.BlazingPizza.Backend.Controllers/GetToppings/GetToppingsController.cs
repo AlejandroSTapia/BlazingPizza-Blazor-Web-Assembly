@@ -2,15 +2,10 @@
 using Microsoft.AspNetCore.Http;
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetToppings;
 using NorthWind.BlazingPizza.Entities.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.BlazingPizza.Backend.Controllers.GetToppings
 {
-	internal static class GetToppingsController 
+    internal static class GetToppingsController 
 	{
 		public static WebApplication UseGetToppingController(
 			this WebApplication app)

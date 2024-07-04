@@ -1,20 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using Microsoft.VisualBasic.FileIO;
 using NorthWind.BlazingPizza.Backend.Repositories.Entities;
 using NorthWind.BlazingPizza.DBAdmin.Configurations;
 using NorthWind.BlazingPizza.EFCore.DataSources.Options;
+using System.Diagnostics;
 
 namespace NorthWind.BlazingPizza.EFCore.DataSources.DataSources
 {
-	internal class BlazingPizzaContext(IOptions<DBOptions> options) :
+    internal class BlazingPizzaContext(IOptions<DBOptions> options) :
 		DbContext
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer(options.Value.ConnectionString);
-			base.OnConfiguring(optionsBuilder);
-		}
+            optionsBuilder.UseSqlServer(options.Value.ConnectionString)
+          .LogTo(message => Debug.WriteLine(message))
+          .EnableSensitiveDataLogging();
+            base.OnConfiguring(optionsBuilder);
+        }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

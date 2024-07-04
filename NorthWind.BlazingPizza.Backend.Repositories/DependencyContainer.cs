@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetOrder;
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetOrders;
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetSpecials;
 using NorthWind.BlazingPizza.Backend.BusinnesObjects.Interfaces.GetToppings;
@@ -19,6 +20,7 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels
 			services.AddScoped<IGetToppingsRepository, GetToppingsRepository>();
 			services.AddScoped<IPlaceOrderRepository, PlaceOrderRepository>();
 			services.AddScoped<IGetOrdersRepository, GetOrdersRepository>();
+			services.AddScoped<IGetOrderRepository, GetOrderRepository>();
 			return services;
 		}
 	}
