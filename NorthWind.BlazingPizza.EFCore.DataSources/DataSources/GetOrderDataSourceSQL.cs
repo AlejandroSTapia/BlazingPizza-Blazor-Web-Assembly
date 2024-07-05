@@ -42,11 +42,11 @@ WHERE o.Id = {orderId}
             //FromSqlRaw devuelve un iquerable
             IQueryable<QueryResultEntity> Query = Set<QueryResultEntity>().FromSqlRaw(SQL);
 
-            Debug.WriteLine(Query.ToQueryString());
+            //Debug.WriteLine(Query.ToQueryString());
 
             var QueryResult = await Query.ToListAsync();
 
-            GetOrderOrderDto Result = ToGetOrderOrderDto(QueryResult;
+            GetOrderOrderDto Result = ToGetOrderOrderDto(QueryResult);
 
             //Result = QueryResult
             //    .GroupBy(o => o.OrderId)
