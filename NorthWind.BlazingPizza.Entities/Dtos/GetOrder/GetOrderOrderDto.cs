@@ -6,6 +6,7 @@ namespace NorthWind.BlazingPizza.Entities.Dtos.GetOrder
         IEnumerable<GetOrderPizzaDto> pizzas, OrderStatus status)
     {
         public int Id => id;
+        public DateTime CreatedTime => createdTime;
         public IEnumerable<GetOrderPizzaDto> Pizzas => pizzas;
         public OrderStatus Status => status;
 

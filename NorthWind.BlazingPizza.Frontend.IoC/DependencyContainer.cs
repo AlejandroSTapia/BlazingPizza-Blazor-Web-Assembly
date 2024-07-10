@@ -37,7 +37,7 @@ public static class DependencyContainer
 		var Configurator = new HttpClientConfigurator(
 			httpClient => httpClient.BaseAddress = WebApiUri, null);
 
-		services.AddModels(Configurator, Configurator, Configurator, Configurator);
+		services.AddModels(Configurator, Configurator, Configurator, Configurator, Configurator);
 
 		return services;
 	}

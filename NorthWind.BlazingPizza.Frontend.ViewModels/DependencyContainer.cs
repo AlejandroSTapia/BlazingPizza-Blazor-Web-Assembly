@@ -3,6 +3,7 @@ using NorthWind.BlazingPizza.Frontend.ViewModels.Checkout;
 using NorthWind.BlazingPizza.Frontend.ViewModels.ConfigurePizzaDialog;
 using NorthWind.BlazingPizza.Frontend.ViewModels.GetSpecials;
 using NorthWind.BlazingPizza.Frontend.ViewModels.Index;
+using NorthWind.BlazingPizza.Frontend.ViewModels.OrderDetails;
 using NorthWind.BlazingPizza.Frontend.ViewModels.Orders;
 
 namespace NorthWind.BlazingPizza.Frontend.ViewModels
@@ -19,6 +20,7 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels
 			services.AddScoped<IndexViewModel>();
 			services.AddScoped<CheckoutViewModel>();
 			services.AddScoped<OrdersViewModel>();
+			services.AddScoped<OrderDetailsViewModel>();
 			return services;
 		}
 	}

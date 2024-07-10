@@ -1,0 +1,37 @@
+﻿@page "/orderdetails/{orderid:int}"
+@using NorthWind.BlazingPizza.Entities.Extensions
+
+<div class="main">
+    @if (ViewModel.InvalidOrder)
+    {
+        <h2>@Messages.NotFoundOrderText</h2>
+        <p>@Messages.NotFoundOrderDetailText</p>
+    }
+    else if(ViewModel.Order == default)
+    {
+        <text>@Messages.LoadingText</text>
+    }
+    else
+    {
+        <div class="track-order">
+            <div class="track-order.title">
+                <h2>
+                    @Messages.CreatedOrderTimeText
+                    @ViewModel.Order.CreatedTime.ToLongDateString()
+                </h2>   
+                <p>
+                    @Messages.StatusText
+                    <strong>
+                        @ViewModel.Order.Status.ToFriendlyString()
+                    </strong>
+                </p>
+            </div>
+
+            <div class="track-order-body">
+                <div class="track-order-details">
+                    <OrderDetailsReview Order="ViewModel.Order"/>
+                </div>
+            </div>
+        </div>
+    }
+</div>

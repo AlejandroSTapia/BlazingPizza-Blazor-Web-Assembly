@@ -132,6 +132,9 @@
   <data name="ChoosePizzaLinkText" xml:space="preserve">
     <value>Elegir pizza</value>
   </data>
+  <data name="CreatedOrderTimeText" xml:space="preserve">
+    <value>Pedido realizado</value>
+  </data>
   <data name="CustomPizzaSizeLabel" xml:space="preserve">
     <value>Tamaño</value>
   </data>
@@ -146,6 +149,12 @@
   </data>
   <data name="MyOrdersText" xml:space="preserve">
     <value>Mis órdenes</value>
+  </data>
+  <data name="NotFoundOrderDetailText" xml:space="preserve">
+    <value>Lo sentimos, pero esta orden no existe.</value>
+  </data>
+  <data name="NotFoundOrderText" xml:space="preserve">
+    <value>!Orden no encontrada!</value>
   </data>
   <data name="OrderAnyPizzaText" xml:space="preserve">
     <value>Ordena alguna pizza</value>

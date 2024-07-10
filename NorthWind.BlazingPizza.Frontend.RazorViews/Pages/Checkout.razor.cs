@@ -6,14 +6,18 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Pages
     public partial class Checkout
     {
         [Inject]
-        CheckoutViewModel viewModel { get; set; }
-        [Inject]
-        NavigationManager navigationManager { get; set; }
+        CheckoutViewModel ViewModel { get; set; }
 
-        async Task PlacerOrder()
+        [Inject]
+        NavigationManager NavigationManager { get; set; }
+
+        async Task PlaceOrder()
         {
-            await viewModel.PlaceOrderAsync();
-            navigationManager.NavigateTo("/");
+            // await viewModel.PlaceOrderAsync();
+            int OrderId = await ViewModel.PlaceOrderAsync();
+            //navigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo($"orderdetails/{OrderId}");
+        
         }
     }
 }

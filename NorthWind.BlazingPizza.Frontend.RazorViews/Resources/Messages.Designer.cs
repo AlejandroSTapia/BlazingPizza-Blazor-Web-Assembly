@@ -106,6 +106,15 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Pedido realizado.
+        /// </summary>
+        internal static string CreatedOrderTimeText {
+            get {
+                return ResourceManager.GetString("CreatedOrderTimeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Tamaño.
         /// </summary>
         internal static string CustomPizzaSizeLabel {
@@ -147,6 +156,24 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         internal static string MyOrdersText {
             get {
                 return ResourceManager.GetString("MyOrdersText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Lo sentimos, pero esta orden no existe..
+        /// </summary>
+        internal static string NotFoundOrderDetailText {
+            get {
+                return ResourceManager.GetString("NotFoundOrderDetailText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a !Orden no encontrada!.
+        /// </summary>
+        internal static string NotFoundOrderText {
+            get {
+                return ResourceManager.GetString("NotFoundOrderText", resourceCulture);
             }
         }
         
