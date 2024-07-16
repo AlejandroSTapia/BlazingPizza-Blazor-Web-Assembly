@@ -1,15 +1,11 @@
 ﻿using Microsoft.AspNetCore.Components;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NorthWind.BlazingPizza.Entities.Dtos.GetOrder;
 
 namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
 {
-    public static class OrderDetailsReview
+    public partial class OrderDetailsReview
     {
         [Parameter]
-
+        public GetOrderOrderDto Order { get; set; }
     }
 }
