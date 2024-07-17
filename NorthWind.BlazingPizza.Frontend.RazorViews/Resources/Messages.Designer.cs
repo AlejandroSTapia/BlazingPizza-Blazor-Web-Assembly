@@ -70,6 +70,69 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ciudad.
+        /// </summary>
+        internal static string AddressCityLabel {
+            get {
+                return ResourceManager.GetString("AddressCityLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dirección.
+        /// </summary>
+        internal static string AddressLine1Label {
+            get {
+                return ResourceManager.GetString("AddressLine1Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Colonia.
+        /// </summary>
+        internal static string AddressLine2 {
+            get {
+                return ResourceManager.GetString("AddressLine2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string AddressNameLabel {
+            get {
+                return ResourceManager.GetString("AddressNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Código Postal.
+        /// </summary>
+        internal static string AddressPostalCode {
+            get {
+                return ResourceManager.GetString("AddressPostalCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estado.
+        /// </summary>
+        internal static string AddressRegionLabel {
+            get {
+                return ResourceManager.GetString("AddressRegionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar a ....
+        /// </summary>
+        internal static string AddressTitleLabel {
+            get {
+                return ResourceManager.GetString("AddressTitleLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Blazing Pizza.
         /// </summary>
         internal static string AppTitle {

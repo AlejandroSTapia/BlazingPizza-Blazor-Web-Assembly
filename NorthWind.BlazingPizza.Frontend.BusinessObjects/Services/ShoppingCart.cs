@@ -1,4 +1,5 @@
-﻿using NorthWind.BlazingPizza.Entities.Dtos.PlaceOrder;
+﻿using NorthWind.BlazingPizza.Entities.Dtos.Common;
+using NorthWind.BlazingPizza.Entities.Dtos.PlaceOrder;
 using NorthWind.BlazingPizza.Frontend.BusinessObjects.Agregates;
 
 namespace NorthWind.BlazingPizza.Frontend.BusinessObjects.Services
@@ -7,6 +8,9 @@ namespace NorthWind.BlazingPizza.Frontend.BusinessObjects.Services
 	{
 		readonly List<CustomPizza> PizzasField = [];
 		public IEnumerable<CustomPizza> Pizzas => PizzasField;
+
+		public AddressDto DeliveryAddress { get; set; }
+
 		public void AddPizza(CustomPizza pizza)=>
 			PizzasField.Add(pizza);
 
@@ -27,7 +31,7 @@ namespace NorthWind.BlazingPizza.Frontend.BusinessObjects.Services
 
 		public static explicit operator PlaceOrderOrderDto(ShoppingCart shoppingCart) =>
 			new PlaceOrderOrderDto(
-				shoppingCart.Pizzas.Select(p => (PlaceOrderPizzaDto)p)
-				);
+				shoppingCart.Pizzas.Select(p => (PlaceOrderPizzaDto)p), shoppingCart.DeliveryAddress);
+				
 	}
 }

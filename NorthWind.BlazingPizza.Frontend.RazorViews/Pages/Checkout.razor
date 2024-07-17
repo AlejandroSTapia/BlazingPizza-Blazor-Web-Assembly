@@ -6,7 +6,12 @@
             <h4>@Messages.ReviewOrderText</h4>
             <OrderReview></OrderReview>
         </div>
+        <div>
+            <h4>@Messages.AddressTitleLabel</h4>
+            <AddressEditor ViewModel="ViewModel.AddressViewModel"/>
+        </div>
     </div>
+
     <button class="checkout-button btn btn-warning"
             @onclick=PlaceOrder
             disabled="@ViewModel.IsSubmitting">

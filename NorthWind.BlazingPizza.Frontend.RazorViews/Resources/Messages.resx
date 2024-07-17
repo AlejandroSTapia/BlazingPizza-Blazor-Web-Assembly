@@ -120,6 +120,27 @@
   <data name="AdditionalToppingsLabel" xml:space="preserve">
     <value>Complementos adicionales</value>
   </data>
+  <data name="AddressCityLabel" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="AddressLine1Label" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="AddressLine2" xml:space="preserve">
+    <value>Colonia</value>
+  </data>
+  <data name="AddressNameLabel" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="AddressPostalCode" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="AddressRegionLabel" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="AddressTitleLabel" xml:space="preserve">
+    <value>Enviar a ...</value>
+  </data>
   <data name="AppTitle" xml:space="preserve">
     <value>Blazing Pizza</value>
   </data>
