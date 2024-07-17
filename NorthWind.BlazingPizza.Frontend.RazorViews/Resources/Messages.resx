@@ -165,6 +165,9 @@
   <data name="HasMaximumToppingsText" xml:space="preserve">
     <value>maximo alcanzado</value>
   </data>
+  <data name="InvalidAddressText" xml:space="preserve">
+    <value>Elnombre, dirección ycódigo postal son requeridos</value>
+  </data>
   <data name="LoadingText" xml:space="preserve">
     <value>Cargando...</value>
   </data>

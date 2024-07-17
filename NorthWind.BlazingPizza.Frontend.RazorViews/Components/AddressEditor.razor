@@ -1,41 +1,42 @@
-﻿<div class="form-field">
+﻿@using Microsoft.AspNetCore.Components.Forms
+<div class="form-field">
     <label>@Messages.AddressNameLabel:</label>
     <div >
-        <input @bind=ViewModel.Name/>
+        <InputText @bind-Value=ViewModel.Name/>
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressLine1Label:</label>
     <div>
-        <input @bind=ViewModel.AddressLine1 />
+        <InputText @bind-Value=ViewModel.AddressLine1 />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressLine2:</label>
     <div>
-        <input @bind=ViewModel.AddressLine2 />
+        <InputText @bind-Value=ViewModel.AddressLine2 />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressCityLabel:</label>
     <div>
-        <input @bind=ViewModel.City />
+        <InputText @bind-Value=ViewModel.City />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressRegionLabel:</label>
     <div>
-        <input @bind=ViewModel.Region />
+        <InputText @bind-Value=ViewModel.Region />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressPostalCode:</label>
     <div>
-        <input @bind=ViewModel.PostalCode />
+        <InputText @bind-Value=ViewModel.PostalCode />
     </div>
 </div>
