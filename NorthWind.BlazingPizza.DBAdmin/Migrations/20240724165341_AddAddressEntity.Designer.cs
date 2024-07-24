@@ -12,8 +12,8 @@ using NorthWind.BlazingPizza.DBAdmin.DataContext;
 namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 {
     [DbContext(typeof(BlazingPizzaContext))]
-    [Migration("20240628002547_AddOrderAndRelatedEntities")]
-    partial class AddOrderAndRelatedEntities
+    [Migration("20240724165341_AddAddressEntity")]
+    partial class AddAddressEntity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,37 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("NorthWind.BlazingPizza.Backend.Repositories.Entities.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AddressLine1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressLine2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Region")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Address", "blazingPizza");
+                });
 
             modelBuilder.Entity("NorthWind.BlazingPizza.Backend.Repositories.Entities.CustomPizza", b =>
                 {
@@ -81,10 +112,15 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("DeliveryAddressId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DeliveryAddressId");
 
                     b.ToTable("Orders", "blazingPizza");
                 });
@@ -353,6 +389,15 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                         .IsRequired();
 
                     b.Navigation("Topping");
+                });
+
+            modelBuilder.Entity("NorthWind.BlazingPizza.Backend.Repositories.Entities.Order", b =>
+                {
+                    b.HasOne("NorthWind.BlazingPizza.Backend.Repositories.Entities.Address", "DeliveryAddress")
+                        .WithMany()
+                        .HasForeignKey("DeliveryAddressId");
+
+                    b.Navigation("DeliveryAddress");
                 });
 
             modelBuilder.Entity("NorthWind.BlazingPizza.Backend.Repositories.Entities.CustomPizza", b =>

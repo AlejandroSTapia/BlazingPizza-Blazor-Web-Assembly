@@ -7,7 +7,7 @@
     <div class="checkout-cols">
         <div>
             <h4>@Messages.ReviewOrderText</h4>
-            <OrderReview></OrderReview>
+            <OrderReview/>
         </div>
         <div>
             <h4>@Messages.AddressTitleLabel</h4>
@@ -23,7 +23,7 @@
     </div>
 
     <button class="checkout-button btn btn-warning"
-            
+            @onclick=PlaceOrder
             disabled="@ViewModel.IsSubmitting">
         @Messages.PlaceOrderButtonText
     </button>

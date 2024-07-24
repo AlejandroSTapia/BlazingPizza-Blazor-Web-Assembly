@@ -30,7 +30,9 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels.Checkout
 
             if (IsValidAddress)
             {
-                shoppingCart.DeliveryAddress = (AddressDto)AddressViewModel; //cast explicito que se implemento (explicit operator) en el viewmodel, con eso ya podemos trnasformarlo
+                //ya se puede usar como aqui ya que se hizo en adresviewmodel
+                //cast explicito que se implemento (explicit operator) en el viewmodel
+                shoppingCart.DeliveryAddress = (AddressDto)AddressViewModel; 
 
                 OrderId = await model.PlaceOrderAsync(shoppingCart);
                 shoppingCart.ResetShoppingCart();

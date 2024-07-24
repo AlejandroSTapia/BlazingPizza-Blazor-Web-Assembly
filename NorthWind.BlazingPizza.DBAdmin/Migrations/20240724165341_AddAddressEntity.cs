@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -7,7 +8,7 @@
 namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 {
     /// <inheritdoc />
-    public partial class AddOrderAndRelatedEntities : Migration
+    public partial class AddAddressEntity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,18 +17,22 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                 name: "blazingPizza");
 
             migrationBuilder.CreateTable(
-                name: "Orders",
+                name: "Address",
                 schema: "blazingPizza",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CreatedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AddressLine1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AddressLine2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Region = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PostalCode = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Orders", x => x.Id);
+                    table.PrimaryKey("PK_Address", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -60,6 +65,28 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Toppings", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Orders",
+                schema: "blazingPizza",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreatedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    DeliveryAddressId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Orders_Address_DeliveryAddressId",
+                        column: x => x.DeliveryAddressId,
+                        principalSchema: "blazingPizza",
+                        principalTable: "Address",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -181,6 +208,12 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
                 schema: "blazingPizza",
                 table: "CustomPizzaTopping",
                 column: "ToppingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_DeliveryAddressId",
+                schema: "blazingPizza",
+                table: "Orders",
+                column: "DeliveryAddressId");
         }
 
         /// <inheritdoc />
@@ -204,6 +237,10 @@ namespace NorthWind.BlazingPizza.DBAdmin.Migrations
 
             migrationBuilder.DropTable(
                 name: "PizzaSpecials",
+                schema: "blazingPizza");
+
+            migrationBuilder.DropTable(
+                name: "Address",
                 schema: "blazingPizza");
         }
     }

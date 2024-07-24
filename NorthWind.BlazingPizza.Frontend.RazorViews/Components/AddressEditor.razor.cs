@@ -7,5 +7,15 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Components
     {
         [Parameter]
         public AddressViewModel ViewModel { get; set; }
+
+        ElementReference NameInput;
+
+        protected override async Task OnAfterRenderAsync(bool firstRender) //solo vale true cuando se renderiza la 1ra vez que se renderiza el compoenente
+        {
+            if (firstRender)
+            {
+                await NameInput.FocusAsync();//para dar enfoque al componente
+            }
+        }
     }
 }

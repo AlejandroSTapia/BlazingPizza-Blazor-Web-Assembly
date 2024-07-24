@@ -61,6 +61,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.WebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.Frontend.RazorViews", "NorthWind.BlazingPizza.Frontend.RazorViews\NorthWind.BlazingPizza.Frontend.RazorViews.csproj", "{3D60A477-8E96-4F07-8236-9993D7D0B236}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.Validation.Entities", "DotNet.Validation.Entities\DotNet.Validation.Entities.csproj", "{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{3D60A477-8E96-4F07-8236-9993D7D0B236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D60A477-8E96-4F07-8236-9993D7D0B236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D60A477-8E96-4F07-8236-9993D7D0B236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +173,7 @@ Global
 		{7DD4F148-40A4-4002-944C-8F1627B35F9B} = {BAE804B2-941B-40D5-920C-5D716E24542E}
 		{E4A0222D-5263-4776-AD99-7819B3C6DFFA} = {E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}
 		{3D60A477-8E96-4F07-8236-9993D7D0B236} = {5A2EB254-BC9A-46F6-BE77-9274C33C2D9D}
+		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D} = {59C7113E-91E7-4F28-9AE7-C4DD9451C4BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA311469-025D-4D54-9E24-4A5CA009B5F2}
