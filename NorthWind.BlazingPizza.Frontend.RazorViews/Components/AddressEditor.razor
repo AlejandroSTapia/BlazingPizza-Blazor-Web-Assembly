@@ -1,86 +1,89 @@
-﻿@* @using Microsoft.AspNetCore.Components.Forms
+﻿@* Formulario con Componentes de Blazor con validaciones con editform *@
+ @using Microsoft.AspNetCore.Components.Forms
 <div class="form-field">
     <label>@Messages.AddressNameLabel:</label>
     <div >
-        <input @ref=NameInput @bind=ViewModel.Name/>
+        @* Los inputText no son compatibles con elementReferences, por ello no puede llevar @ref *@
+        <InputText @bind-Value=ViewModel.Name/>
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressLine1Label:</label>
     <div>
-        <input @bind=ViewModel.AddressLine1 />
+        <InputText @bind-Value=ViewModel.AddressLine1 />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressLine2:</label>
     <div>
-        <input @bind=ViewModel.AddressLine2 />
+        <InputText @bind-Value=ViewModel.AddressLine2 />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressCityLabel:</label>
     <div>
-        <input @bind=ViewModel.City />
+        <InputText @bind-Value=ViewModel.City />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressRegionLabel:</label>
     <div>
-        <input @bind=ViewModel.Region />
+        <InputText @bind-Value=ViewModel.Region />
     </div>
 </div>
 
 <div class="form-field">
     <label>@Messages.AddressPostalCode:</label>
     <div>
-        <input @bind=ViewModel.PostalCode />
+        <InputText @bind-Value=ViewModel.PostalCode />
+    </div>
+</div> 
+
+   
+@* Formulario Con elementos html *@
+@* @using Microsoft.AspNetCore.Components.Forms
+<div class="form-field">
+    <label>@Messages.AddressNameLabel:</label>
+    <div >
+        <InputText @ref=NameInput @bind-Value=ViewModel.Name/>
+    </div>
+</div>
+
+<div class="form-field">
+    <label>@Messages.AddressLine1Label:</label>
+    <div>
+        <InputText @bind-Value=ViewModel.AddressLine1 />
+    </div>
+</div>
+
+<div class="form-field">
+    <label>@Messages.AddressLine2:</label>
+    <div>
+        <InputText @bind-Value=ViewModel.AddressLine2 />
+    </div>
+</div>
+
+<div class="form-field">
+    <label>@Messages.AddressCityLabel:</label>
+    <div>
+        <InputText @bind-Value=ViewModel.City />
+    </div>
+</div>
+
+<div class="form-field">
+    <label>@Messages.AddressRegionLabel:</label>
+    <div>
+        <InputText @bind-Value=ViewModel.Region />
+    </div>
+</div>
+
+<div class="form-field">
+    <label>@Messages.AddressPostalCode:</label>
+    <div>
+        <InputText @bind-Value=ViewModel.PostalCode />
     </div>
 </div> *@
-
-    
-@using Microsoft.AspNetCore.Components.Forms
-<div class="form-field">
-    <label>@Messages.AddressNameLabel:</label>
-    <div >
-        <input @ref=NameInput @bind=ViewModel.Name/>
-    </div>
-</div>
-
-<div class="form-field">
-    <label>@Messages.AddressLine1Label:</label>
-    <div>
-        <input @bind=ViewModel.AddressLine1 />
-    </div>
-</div>
-
-<div class="form-field">
-    <label>@Messages.AddressLine2:</label>
-    <div>
-        <input @bind=ViewModel.AddressLine2 />
-    </div>
-</div>
-
-<div class="form-field">
-    <label>@Messages.AddressCityLabel:</label>
-    <div>
-        <input @bind=ViewModel.City />
-    </div>
-</div>
-
-<div class="form-field">
-    <label>@Messages.AddressRegionLabel:</label>
-    <div>
-        <input @bind=ViewModel.Region />
-    </div>
-</div>
-
-<div class="form-field">
-    <label>@Messages.AddressPostalCode:</label>
-    <div>
-        <input @bind=ViewModel.PostalCode />
-    </div>
-</div>

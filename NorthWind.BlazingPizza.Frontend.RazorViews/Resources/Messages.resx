@@ -166,7 +166,7 @@
     <value>maximo alcanzado</value>
   </data>
   <data name="InvalidAddressText" xml:space="preserve">
-    <value>Elnombre, dirección ycódigo postal son requeridos</value>
+    <value>El nombre, dirección y código postal son requeridos.</value>
   </data>
   <data name="LoadingText" xml:space="preserve">
     <value>Cargando...</value>

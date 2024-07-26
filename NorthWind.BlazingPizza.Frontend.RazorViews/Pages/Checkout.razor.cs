@@ -13,6 +13,8 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Pages
         [Inject]
         NavigationManager NavigationManager { get; set; }
 
+        //Esto podria haber ido en el viewmodel, pero el vm no esta casado con blazor y no conoce EditContext
+        //por eso mejor se hara hasta que vaya a pasar el pedido    -   Interceptor para invocar al Placeorder
         async Task CheckSubmission(EditContext context)
         {
             if (ViewModel.ValidateAddress(

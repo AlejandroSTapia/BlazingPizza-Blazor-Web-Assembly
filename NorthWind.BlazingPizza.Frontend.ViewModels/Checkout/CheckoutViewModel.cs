@@ -12,8 +12,8 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels.Checkout
         public bool IsSubmitting { get; set; }
         public AddressViewModel AddressViewModel { get; private set; } = new AddressViewModel();
 
-        public bool IsValidAddress { get; private set; }
-        public bool ValidateAddress(AddressViewModel address)
+        public bool IsValidAddress { get; private set; }//para que la vista le pregunte al viewmodel y asi poder realizar el envio(si es valida o no la direccion)
+        public bool ValidateAddress(AddressViewModel address)//para que la vista le diga al modelo que valide una direccion(logica en vista no, si en viewmodel)
         {
             IsValidAddress =
                 !string.IsNullOrWhiteSpace(address.Name) &&
@@ -28,6 +28,8 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels.Checkout
 
             int OrderId = 0;
 
+            ValidateAddress(AddressViewModel);//por si la vista no valida(adicionalmente)
+
             if (IsValidAddress)
             {
                 //ya se puede usar como aqui ya que se hizo en adresviewmodel
@@ -37,6 +39,7 @@ namespace NorthWind.BlazingPizza.Frontend.ViewModels.Checkout
                 OrderId = await model.PlaceOrderAsync(shoppingCart);
                 shoppingCart.ResetShoppingCart();
             }
+
             IsSubmitting = false;
             return OrderId;
         }

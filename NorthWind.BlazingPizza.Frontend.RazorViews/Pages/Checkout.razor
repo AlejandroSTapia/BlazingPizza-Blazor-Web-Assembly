@@ -1,32 +1,31 @@
 ﻿@page "/checkout"
+@using Microsoft.AspNetCore.Components.Forms
 
 <div class="main">
     <EditForm Model="ViewModel.AddressViewModel"
-    OnSubmit="CheckSubmission">
+              OnSubmit="CheckSubmission">
 
-    <div class="checkout-cols">
-        <div>
-            <h4>@Messages.ReviewOrderText</h4>
-            <OrderReview/>
-        </div>
-        <div>
-            <h4>@Messages.AddressTitleLabel</h4>
+        <div class="checkout-cols">
+            <div>
+                <h4>@Messages.ReviewOrderText</h4>
+                <OrderReview />
+            </div>
+            <div>
+                <h4>@Messages.AddressTitleLabel</h4>
 
-                @if (!ViewModel.IsValidAddress)
+                @if(!ViewModel.IsValidAddress)
                 {
                     <div class="alert alert-danger">
                         @Messages.InvalidAddressText
                     </div>
                 }
-            <AddressEditor ViewModel="ViewModel.AddressViewModel"/>
+                <AddressEditor ViewModel="ViewModel.AddressViewModel" />
+            </div>
         </div>
-    </div>
-
-    <button class="checkout-button btn btn-warning"
-            @onclick=PlaceOrder
-            disabled="@ViewModel.IsSubmitting">
+        
+        <button class="checkout-button btn btn-warning"
+        disabled="@ViewModel.IsSubmitting">
         @Messages.PlaceOrderButtonText
-    </button>
-
+        </button>
     </EditForm>
 </div>

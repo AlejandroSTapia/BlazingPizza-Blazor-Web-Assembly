@@ -205,7 +205,7 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Elnombre, dirección ycódigo postal son requeridos.
+        ///   Busca una cadena traducida similar a El nombre, dirección y código postal son requeridos..
         /// </summary>
         internal static string InvalidAddressText {
             get {
