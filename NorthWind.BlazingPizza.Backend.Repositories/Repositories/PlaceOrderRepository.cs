@@ -22,7 +22,7 @@ namespace NorthWind.BlazingPizza.Backend.Repositories.Repositories
             Order.DeliveryAddress = order.DeliveryAddress.ToAddress(); //se usa el metodo de extension creado(convertirdo a address)
 
             await dataSource.PlaceOrderAsync(Order);
-            return Order.Id;
+            return Order.Id;  
         }
     }
 }
