@@ -1,5 +1,4 @@
 ﻿@* Formulario con Componentes de Blazor con validaciones con editform *@
- @using Microsoft.AspNetCore.Components.Forms
 <div class="form-field">
     <label>@Messages.AddressNameLabel:</label>
     <div >
@@ -16,7 +15,7 @@
 </div>
 
 <div class="form-field">
-    <label>@Messages.AddressLine2:</label>
+    <label>@Messages.AddressLine2Label:</label>
     <div>
         <InputText @bind-Value=ViewModel.AddressLine2 />
     </div>

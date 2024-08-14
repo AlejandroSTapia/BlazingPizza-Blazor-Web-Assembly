@@ -126,7 +126,7 @@
   <data name="AddressLine1Label" xml:space="preserve">
     <value>Dirección</value>
   </data>
-  <data name="AddressLine2" xml:space="preserve">
+  <data name="AddressLine2Label" xml:space="preserve">
     <value>Colonia</value>
   </data>
   <data name="AddressNameLabel" xml:space="preserve">

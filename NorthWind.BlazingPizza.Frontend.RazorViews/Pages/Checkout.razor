@@ -1,5 +1,4 @@
 ﻿@page "/checkout"
-@using Microsoft.AspNetCore.Components.Forms
 
 <div class="main">
     <EditForm Model="ViewModel.AddressViewModel"
@@ -13,12 +12,14 @@
             <div>
                 <h4>@Messages.AddressTitleLabel</h4>
 
+
                 @if(!ViewModel.IsValidAddress)
                 {
                     <div class="alert alert-danger">
                         @Messages.InvalidAddressText
                     </div>
                 }
+
                 <AddressEditor ViewModel="ViewModel.AddressViewModel" />
             </div>
         </div>

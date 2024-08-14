@@ -90,9 +90,9 @@ namespace NorthWind.BlazingPizza.Frontend.RazorViews.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Colonia.
         /// </summary>
-        internal static string AddressLine2 {
+        internal static string AddressLine2Label {
             get {
-                return ResourceManager.GetString("AddressLine2", resourceCulture);
+                return ResourceManager.GetString("AddressLine2Label", resourceCulture);
             }
         }
         
