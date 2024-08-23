@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace DotNet.Validation.Entities.Interfaces
 {
+    //Concentrador de validadores
+    //tendra todos los validadores para un modelo
     public interface IModelValidatorHub<T>
     {
-        Task<bool> Validate(T model);
-        IEnumerable<ValidationError> Errors { get; }
+        Task<bool> Validate(T model);//invocara el validate de cada modelValidate
+        IEnumerable<ValidationError> Errors { get; } //para exponer los validate recibidos y exponer los errores de validacion
     }
 }

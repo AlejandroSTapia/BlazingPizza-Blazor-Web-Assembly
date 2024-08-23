@@ -8,7 +8,7 @@ namespace DotNet.Validation.Entities.Enums
 {
     public enum ValidationConstraint
     {
-        AlwaysValidate,
-        ValidateIfThereAreNoPreviousErrors
+        AlwaysValidate, //Validar siempre
+        ValidateIfThereAreNoPreviousErrors //solo valida si no hay errores previos
     }
 }

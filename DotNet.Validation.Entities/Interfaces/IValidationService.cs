@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace DotNet.Validation.Entities.Interfaces
 {
-    internal interface IValidationService<T>
+    //se encragarade cumplir las reglas de validacion
+    public interface IValidationService<T>
     {
         IValidationRules<T, TProperty> AddRuleFor<TProperty>(
             Expression<Func<T, TProperty>> expression);

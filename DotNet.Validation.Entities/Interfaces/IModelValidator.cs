@@ -8,11 +8,15 @@ using System.Threading.Tasks;
 
 namespace DotNet.Validation.Entities.Interfaces
 {
-    public interface IModelValidator<T>
+    //Validador
+    //sera capaz de trabajar con cualquier tipo d emodelo
+    public interface IModelValidator<T>//interfaz generica
     {
-        Task<bool> Validate(T model);
-        IEnumerable<ValidationError> Errors { get; }
-
+        //debee exponer un metodo que permita validar
+        Task<bool> Validate(T model);//recibira un modelo a validar regresando un valor bool
+        //pero no sera suficiente con eso, para eso requerira un:
+        IEnumerable<ValidationError> Errors { get; } //para asaber cuales fueron los errores
+        //exponer que permita indicar cuando puede ser validado o no
         ValidationConstraint Constraint { get; }
     }
 }
