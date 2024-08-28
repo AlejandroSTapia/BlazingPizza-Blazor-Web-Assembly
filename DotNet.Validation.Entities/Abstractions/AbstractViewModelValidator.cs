@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DotNet.Validation.Entities.Abstractions
 {
-    internal class AbstractViewModelValidator<DtoType, ViewModelType>(
+    public abstract class AbstractViewModelValidator<DtoType, ViewModelType>(
         IModelValidatorHub<DtoType> dtoModelValidatorHub,
         ValidationConstraint constraint): IModelValidator<ViewModelType>
     {
