@@ -61,6 +61,132 @@ namespace NorthWind.BlazingPizza.Entities.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar un máximo de 50 caracteres de la ciudad..
+        /// </summary>
+        internal static string AddressCityMaximumLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressCityMaximumLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar al menos 3 caracteres de la ciudad..
+        /// </summary>
+        internal static string AddressCityMinimumLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressCityMinimumLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La ciudad es requerida..
+        /// </summary>
+        internal static string AddressCityRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressCityRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar un máximo de 100 caracteres del nombre..
+        /// </summary>
+        internal static string AddressLine1MaximumLenghtLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressLine1MaximumLenghtLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar al menos 5 caracteres de la línea 1..
+        /// </summary>
+        internal static string AddressLine1MinimummLenghtLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressLine1MinimummLenghtLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El línea 1 es requerida..
+        /// </summary>
+        internal static string AddressLine1RequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressLine1RequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar un máximo de 100 caracteres del nombre..
+        /// </summary>
+        internal static string AddressNameMaximumLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressNameMaximumLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar al menos 3 caracteres del nombre..
+        /// </summary>
+        internal static string AddressNameMinimumLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressNameMinimumLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El nombre es requerido..
+        /// </summary>
+        internal static string AddressNameRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressNameRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Proporcione 5 dígitos del código postal..
+        /// </summary>
+        internal static string AddressPostalCodeInvalidErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressPostalCodeInvalidErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El código postal es requerido..
+        /// </summary>
+        internal static string AddressPostalCodeRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressPostalCodeRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar un máximo de 20 caracteres de la región..
+        /// </summary>
+        internal static string AddressRegionMaximumLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressRegionMaximumLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar al menos 3 caracteres de la región..
+        /// </summary>
+        internal static string AddressRegionMinimumLengthRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressRegionMinimumLengthRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La región es requerida..
+        /// </summary>
+        internal static string AddressRegionRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressRegionRequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Entregado.
         /// </summary>
         internal static string DeliveredText {

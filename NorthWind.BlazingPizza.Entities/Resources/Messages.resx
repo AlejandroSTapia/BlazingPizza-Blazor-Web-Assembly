@@ -129,4 +129,46 @@
   <data name="UnknownStatusText" xml:space="preserve">
     <value>Desconocido</value>
   </data>
+  <data name="AddressNameRequiredErrorMessage" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+  <data name="AddressNameMaximumLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar un máximo de 100 caracteres del nombre.</value>
+  </data>
+  <data name="AddressLine1MinimummLenghtLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar al menos 5 caracteres de la línea 1.</value>
+  </data>
+  <data name="AddressLine1MaximumLenghtLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar un máximo de 100 caracteres del nombre.</value>
+  </data>
+  <data name="AddressNameMinimumLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar al menos 3 caracteres del nombre.</value>
+  </data>
+  <data name="AddressLine1RequiredErrorMessage" xml:space="preserve">
+    <value>El línea 1 es requerida.</value>
+  </data>
+  <data name="AddressCityMaximumLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar un máximo de 50 caracteres de la ciudad.</value>
+  </data>
+  <data name="AddressCityMinimumLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar al menos 3 caracteres de la ciudad.</value>
+  </data>
+  <data name="AddressCityRequiredErrorMessage" xml:space="preserve">
+    <value>La ciudad es requerida.</value>
+  </data>
+  <data name="AddressPostalCodeRequiredErrorMessage" xml:space="preserve">
+    <value>El código postal es requerido.</value>
+  </data>
+  <data name="AddressRegionRequiredErrorMessage" xml:space="preserve">
+    <value>La región es requerida.</value>
+  </data>
+  <data name="AddressRegionMinimumLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar al menos 3 caracteres de la región.</value>
+  </data>
+  <data name="AddressRegionMaximumLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar un máximo de 20 caracteres de la región.</value>
+  </data>
+  <data name="AddressPostalCodeInvalidErrorMessage" xml:space="preserve">
+    <value>Proporcione 5 dígitos del código postal.</value>
+  </data>
 </root>
