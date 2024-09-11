@@ -61,7 +61,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.WebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.BlazingPizza.Frontend.RazorViews", "NorthWind.BlazingPizza.Frontend.RazorViews\NorthWind.BlazingPizza.Frontend.RazorViews.csproj", "{3D60A477-8E96-4F07-8236-9993D7D0B236}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.Validation.Entities", "DotNet.Validation.Entities\DotNet.Validation.Entities.csproj", "{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet.Validation.Entities", "DotNet.Validation.Entities\DotNet.Validation.Entities.csproj", "{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{987E2EA5-A661-4191-A60E-AD28B8C6F975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.ValidationService.FluentValidation", "NorthWind.ValidationService.FluentValidation\NorthWind.ValidationService.FluentValidation.csproj", "{95396287-E469-4581-9EF7-BFEDA8D26D02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +147,10 @@ Global
 		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95396287-E469-4581-9EF7-BFEDA8D26D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95396287-E469-4581-9EF7-BFEDA8D26D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95396287-E469-4581-9EF7-BFEDA8D26D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95396287-E469-4581-9EF7-BFEDA8D26D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,6 +182,8 @@ Global
 		{E4A0222D-5263-4776-AD99-7819B3C6DFFA} = {E5D8D5CE-13BD-49ED-8CC3-95711A5C9270}
 		{3D60A477-8E96-4F07-8236-9993D7D0B236} = {5A2EB254-BC9A-46F6-BE77-9274C33C2D9D}
 		{41B0F088-CB84-409D-8AAC-A4ABDD356B3D} = {59C7113E-91E7-4F28-9AE7-C4DD9451C4BD}
+		{987E2EA5-A661-4191-A60E-AD28B8C6F975} = {35E1D1D4-79E2-4311-94B5-5ADE0F3CC490}
+		{95396287-E469-4581-9EF7-BFEDA8D26D02} = {987E2EA5-A661-4191-A60E-AD28B8C6F975}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA311469-025D-4D54-9E24-4A5CA009B5F2}
