@@ -90,18 +90,18 @@ namespace NorthWind.BlazingPizza.Entities.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Debe proporcionar un máximo de 100 caracteres del nombre..
         /// </summary>
-        internal static string AddressLine1MaximumLenghtLengthRequiredErrorMessage {
+        internal static string AddressLine1MaximumLenghtRequiredErrorMessage {
             get {
-                return ResourceManager.GetString("AddressLine1MaximumLenghtLengthRequiredErrorMessage", resourceCulture);
+                return ResourceManager.GetString("AddressLine1MaximumLenghtRequiredErrorMessage", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Debe proporcionar al menos 5 caracteres de la línea 1..
         /// </summary>
-        internal static string AddressLine1MinimummLenghtLengthRequiredErrorMessage {
+        internal static string AddressLine1MinimummLenghtRequiredErrorMessage {
             get {
-                return ResourceManager.GetString("AddressLine1MinimummLenghtLengthRequiredErrorMessage", resourceCulture);
+                return ResourceManager.GetString("AddressLine1MinimummLenghtRequiredErrorMessage", resourceCulture);
             }
         }
         
@@ -111,6 +111,15 @@ namespace NorthWind.BlazingPizza.Entities.Resources {
         internal static string AddressLine1RequiredErrorMessage {
             get {
                 return ResourceManager.GetString("AddressLine1RequiredErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Debe proporcionar un máximo de 100 caracteres del nombre..
+        /// </summary>
+        internal static string AddressLine2MaximumLenghtRequiredErrorMessage {
+            get {
+                return ResourceManager.GetString("AddressLine2MaximumLenghtRequiredErrorMessage", resourceCulture);
             }
         }
         

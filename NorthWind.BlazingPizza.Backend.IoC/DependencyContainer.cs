@@ -3,6 +3,7 @@ using NorthWind.BlazingPizza.Backend.BusinnesObjects.Options;
 using NorthWind.BlazingPizza.Backend.UseCases;
 using NorthWind.BlazingPizza.EFCore.DataSources;
 using NorthWind.BlazingPizza.EFCore.DataSources.Options;
+using NorthWind.BlazingPizza.Entities;
 using NorthWind.BlazingPizza.Frontend.ViewModels;
 
 namespace NorthWind.BlazingPizza.Backend.Presenters
@@ -18,7 +19,8 @@ namespace NorthWind.BlazingPizza.Backend.Presenters
 			services.AddUseCasesServices()
 				.AddRepositories()
 				.AddDataSources(configureDbOptions)
-				.AddPresenters();
+				.AddPresenters()
+				.AddValidators();
 
 			services.Configure(configureBlazingPizzaOptions);
 

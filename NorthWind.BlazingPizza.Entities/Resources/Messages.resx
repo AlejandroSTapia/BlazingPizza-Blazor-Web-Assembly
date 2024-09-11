@@ -135,7 +135,7 @@
   <data name="AddressNameMaximumLengthRequiredErrorMessage" xml:space="preserve">
     <value>Debe proporcionar un máximo de 100 caracteres del nombre.</value>
   </data>
-  <data name="AddressLine1MinimummLenghtLengthRequiredErrorMessage" xml:space="preserve">
+  <data name="AddressLine1MinimummLenghtRequiredErrorMessage" xml:space="preserve">
     <value>Debe proporcionar al menos 5 caracteres de la línea 1.</value>
   </data>
   <data name="AddressLine1MaximumLenghtLengthRequiredErrorMessage" xml:space="preserve">
@@ -170,5 +170,8 @@
   </data>
   <data name="AddressPostalCodeInvalidErrorMessage" xml:space="preserve">
     <value>Proporcione 5 dígitos del código postal.</value>
+  </data>
+  <data name="AddressLine2MaximumLenghtLengthRequiredErrorMessage" xml:space="preserve">
+    <value>Debe proporcionar un máximo de 100 caracteres del nombre.</value>
   </data>
 </root>

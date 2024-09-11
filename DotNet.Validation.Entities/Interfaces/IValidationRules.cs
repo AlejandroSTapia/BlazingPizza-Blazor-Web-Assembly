@@ -24,7 +24,7 @@ namespace DotNet.Validation.Entities.Interfaces
         IValidationRules<T, TProperty> MaximumLength(int length, string errorMessage);
         IValidationRules<T, TProperty> MinimumLength(int length, string errorMessage);
         IValidationRules<T, TProperty> EmailAddress(string errorMessage);
-        IValidationRules<T, TProperty> Match(string regularExpression ,string errorMessage);//para expresiones regulares
+        IValidationRules<T, TProperty> Matches(string regularExpression ,string errorMessage);//para expresiones regulares
 
         //El tipo del modelo a validar esta definido en el parametro T
         //y el tipo de la propiedad qeu deseamos validar esta en TProperty
