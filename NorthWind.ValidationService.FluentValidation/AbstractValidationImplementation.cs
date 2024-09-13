@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 namespace NorthWind.ValidationService.FluentValidation
 {
     //tiene los metodos para agregar las reglas pero es abstracta, porlo qu eno se puede instanciar y se requiere heredarla
+
+    //Instanciar de manera indirecta AbstractValidator por medio de otra clase que hereda de AbstractValidator y asi, se instancia esta nueva clase
     internal class AbstractValidationImplementation<T> :AbstractValidator<T>
     {
     }
